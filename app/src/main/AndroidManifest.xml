@@ -4,7 +4,8 @@
     <application android:allowBackup="true" android:label="@string/app_name"
         android:icon="@drawable/ic_launcher" android:theme="@style/Theme.Transparent">
 
-        <activity android:name=".shareToClipboardActivity" >
+        <activity android:name=".shareToClipboardActivity"
+            android:label="@string/share_to_clipboard_activity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />
