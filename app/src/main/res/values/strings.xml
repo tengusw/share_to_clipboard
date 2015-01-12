@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Share to Clipboard</string>
+    <string name="other">Other</string>
+    <string name="error_no_data">No data found</string>
+    <string name="error_type_not_supported">Type not supported, Please report to developer.</string>
+    <string name="copied">Copied to clipboard.</string>
 </resources>

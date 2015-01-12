@@ -36,8 +36,10 @@ public class shareToClipboardActivity extends Activity {
         if (Intent.ACTION_SEND.equals(action) && type != null) {
             if (HTTP.PLAIN_TEXT_TYPE.equals(type))
                 handleSendText(intent);
-            if (Contacts.CONTENT_VCARD_TYPE.equals(type))
+            else if (Contacts.CONTENT_VCARD_TYPE.equals(type))
                 handleSendVCard(intent);
+            else
+                showToast(getString(R.string.error_type_not_supported));
         }
         finish();
     }
@@ -51,6 +53,8 @@ public class shareToClipboardActivity extends Activity {
             stream = cr.openInputStream(uri);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            showToast(getString(R.string.error_no_data));
+            return;
         }
 
         StringBuffer fileContent = new StringBuffer("");
@@ -62,6 +66,8 @@ public class shareToClipboardActivity extends Activity {
             stream.close();
         } catch (IOException e) {
             e.printStackTrace();
+            showToast(getString(R.string.error_no_data));
+            return;
         }
         VCard vcard = Ezvcard.parse(new String(fileContent)).first();
         String fullName = vcard.getFormattedName().getValue();
@@ -84,7 +90,7 @@ public class shareToClipboardActivity extends Activity {
                 return_value += value.toString().substring(0, 1).toUpperCase() + value.toString().substring(1).toLowerCase();
         }
         if (return_value.equals(""))
-            return_value = "Other";
+            return_value = getString(R.string.other);
         return return_value;
     }
 
@@ -96,7 +102,7 @@ public class shareToClipboardActivity extends Activity {
         String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
         String sharedTitle = intent.getStringExtra(Intent.EXTRA_SUBJECT);
         if (sharedText == null && sharedTitle == null) {
-            Toast.makeText(this, "Nothing to Share", Toast.LENGTH_LONG).show();
+            showToast(getString(R.string.error_no_data));
             return;
         }
 
@@ -125,7 +131,7 @@ public class shareToClipboardActivity extends Activity {
                             "text", clipboardText);
             clipboard.setPrimaryClip(clip);
         }
-
+        showToast(getString(R.string.copied));
     }
 
 }
