@@ -1,0 +1,1 @@
+Android share to clipboard.
