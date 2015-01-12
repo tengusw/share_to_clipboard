@@ -2,7 +2,7 @@
     <string name="app_name">Share to Clipboard</string>
     <string name="share_to_clipboard_activity">Clipboard</string>
     <string name="other">Other</string>
-    <string name="error_no_data">No data found</string>
-    <string name="error_type_not_supported">Type not supported, Please report to developer.</string>
-    <string name="copied">Copied to clipboard.</string>
+    <string name="error_no_data">Nothing to copy</string>
+    <string name="error_type_not_supported">Share type not supported, please report to developers</string>
+    <string name="copied">Copied to clipboard</string>
 </resources>
