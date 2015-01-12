@@ -101,19 +101,16 @@ public class shareToClipboardActivity extends Activity {
     private void handleSendText(Intent intent) {
         String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
         String sharedTitle = intent.getStringExtra(Intent.EXTRA_SUBJECT);
-        if (sharedText == null && sharedTitle == null) {
-            showToast(getString(R.string.error_no_data));
-            return;
-        }
 
-        String clipboardText = "";
-        if (sharedTitle != null)
-            clipboardText+= sharedTitle;
-        if (sharedText != null && sharedTitle != null)
-            clipboardText += "\n";
-        if (sharedText != null)
-            clipboardText+= sharedText;
-        copyToClipboard(clipboardText);
+        if (sharedText != null) {
+            copyToClipboard(sharedText);
+        }
+        else if (sharedTitle != null) {
+            copyToClipboard(sharedTitle);
+        }
+        else {
+            showToast(getString(R.string.error_no_data));
+        }
     }
 
     @SuppressLint("NewApi")
