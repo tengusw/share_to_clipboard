@@ -3,7 +3,8 @@
 Share to Clipboard is an Android app to copy clipboard straight from the share menu.
 
 On google play: https://play.google.com/store/apps/details?id=com.tengu.sharetoclipboard
-On F-Droid: TBD
+
+On F-Droid: https://f-droid.org/app/com.tengu.sharetoclipboard
 
 ## Contributing
 
