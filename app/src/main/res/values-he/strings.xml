@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">שתף ללוח העריכה </string>
+    <string name="app_name">שתף ללוח העריכה</string>
     <string name="share_to_clipboard_activity">העתק</string>
     <string name="other">אחר</string>
     <string name="error_no_data">אין מה להעתיק</string>
