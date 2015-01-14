@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">שתף ללוח העריכה </string>
+    <string name="share_to_clipboard_activity">העתק</string>
+    <string name="other">אחר</string>
+    <string name="error_no_data">אין מה להעתיק</string>
+    <string name="error_type_not_supported">שיתוף לא נתמך, בבקשה צור קשר עם המפתחים</string>
+    <string name="copied">הועתק ללוח העריכה</string>
+</resources>
