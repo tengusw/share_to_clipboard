@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mit Zwischenablage teilen</string>
+    <string name="share_to_clipboard_activity">Zwischenablage</string>
+    <string name="other">Andere</string>
+    <string name="error_no_data">Nichts zum kopieren</string>
+    <string name="error_type_not_supported">Zu teilender Inhalt nicht erkannt, Entwickler kontaktieren</string>
+    <string name="copied">Zur Zwischenablage kopiert</string>
+</resources>
