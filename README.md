@@ -30,3 +30,4 @@ The following people have contributed code or translations to this project:
  - [Mario Sanchez Prada](https://github.com/mariospr)
  - [Yakov Goldberg](https://github.com/yakov-g)
  - Naofumi F
+ - [Flávio Vinicius Alvares Ceolin](https://github.com/ceolin)
