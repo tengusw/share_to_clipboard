@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Copiar al Portapapeles</string>
+    <string name="share_to_clipboard_activity">Portapapeles</string>
+    <string name="other">Otro</string>
+    <string name="error_no_data">Nada que copiar</string>
+    <string name="error_type_not_supported">Modo de compartir no soportado, por favor informa a los desarrolladores</string>
+    <string name="copied">Copiado al Portapapeles</string>
+</resources>
