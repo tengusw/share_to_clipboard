@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sdílet do schránky</string>
+    <string name="share_to_clipboard_activity">Schránka</string>
+    <string name="other">Ostatní</string>
+    <string name="error_no_data">Nic ke zkopírování</string>
+    <string name="error_type_not_supported">Typ sdílení není podporován, prosím ohlaste vývojářům</string>
+    <string name="copied">Zkopírováno do schránky</string>
+</resources>
