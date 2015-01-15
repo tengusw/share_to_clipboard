@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">共有からクリップボード</string>
+    <string name="share_to_clipboard_activity">クリップボード</string>
+    <string name="other">その他</string>
+    <string name="error_no_data">コピー対象がありません</string>
+    <string name="error_type_not_supported">共有の形式がサポートされていません。開発者にご連絡ください</string>
+    <string name="copied">クリップボードにコピーしました</string>
+</resources>
