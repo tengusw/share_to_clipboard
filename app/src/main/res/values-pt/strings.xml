@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Compartilhe para área de transferência</string>
+    <string name="share_to_clipboard_activity">Área de transferência</string>
+    <string name="other">Outro</string>
+    <string name="error_no_data">Nada para copiar</string>
+    <string name="error_type_not_supported">Tipo de compartilhamento não suportado, por favor contate os desenvolvedores</string>
+    <string name="copied">Copiado para área de transferência</string>
+</resources>
