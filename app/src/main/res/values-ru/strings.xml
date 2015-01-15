@@ -1,0 +1,9 @@
+
+<resources>
+    <string name="app_name">Поделиться в Буфер обмена</string>
+    <string name="share_to_clipboard_activity">Буфер обмена</string>
+    <string name="other">Другое</string>
+    <string name="error_no_data">Нечего копировать</string>
+    <string name="error_type_not_supported">Тип обмена не поддерживается, пожалуйста сообщите разработчикам</string>
+    <string name="copied">Скопировано в буфер обмена</string>
+</resources>
