@@ -1,0 +1,8 @@
+<resources>
+	<string name="app_name">클립보드로 복사</string>
+	<string name="share_to_clipboard_activity">클립보드</string>
+	<string name="other">기타</string>
+	<string name="error_no_data">복사할 데이터가 없음</string>
+	<string name="error_type_not_supported">지원하지 않는 타입. 개발자에게 알려 주세요.</string>
+	<string name="copied">클립보드로 복사 완료</string>
+</resources>
