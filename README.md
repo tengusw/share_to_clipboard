@@ -31,3 +31,4 @@ The following people have contributed code or translations to this project:
  - [Yakov Goldberg](https://github.com/yakov-g)
  - Naofumi F
  - [Flávio Vinicius Alvares Ceolin](https://github.com/ceolin)
+ - [ChunEon Park](https://github.com/hermet)
