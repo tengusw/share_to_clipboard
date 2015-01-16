@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">क्लिपबोर्ड पर शेयर</string>
+    <string name="share_to_clipboard_activity">क्लिपबोर्ड</string>
+    <string name="other">अन्य</string>
+    <string name="error_no_data">कुछ भी नहीं कॉपी करने के लिए</string>
+    <string name="error_type_not_supported">शेयर प्रकार समर्थित नहीं, डेवलपर्स को विवरण साझा करें</string>
+    <string name="copied">क्लिपबोर्ड में कॉपी</string>
+</resources>
