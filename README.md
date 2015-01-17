@@ -29,6 +29,6 @@ The following people have contributed code or translations to this project:
  - [Daniel Kolesa](https://github.com/q66)
  - [Mario Sanchez Prada](https://github.com/mariospr)
  - [Yakov Goldberg](https://github.com/yakov-g)
- - Naofumi F
+ - Naofumi Fukue
  - [Flávio Vinicius Alvares Ceolin](https://github.com/ceolin)
  - [ChunEon Park](https://github.com/hermet)
