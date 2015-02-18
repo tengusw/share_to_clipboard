@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -117,12 +118,10 @@ public class shareToClipboardActivity extends Activity {
     private void copyToClipboard(String clipboardText){
         int sdk = Build.VERSION.SDK_INT;
         if (sdk < Build.VERSION_CODES.HONEYCOMB) {
-            ClipboardManager clipboard = (ClipboardManager) this
-                    .getSystemService(this.CLIPBOARD_SERVICE);
+            android.text.ClipboardManager clipboard = (android.text.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
             clipboard.setText(clipboardText);
         } else {
-            ClipboardManager clipboard = (android.content.ClipboardManager) this
-                    .getSystemService(this.CLIPBOARD_SERVICE);
+            ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(this.CLIPBOARD_SERVICE);
             ClipData clip = ClipData
                     .newPlainText(
                             "text", clipboardText);
