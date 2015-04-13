@@ -33,3 +33,4 @@ The following people have contributed code or translations to this project:
  - [Flávio Vinicius Alvares Ceolin](https://github.com/ceolin)
  - [ChunEon Park](https://github.com/hermet)
  - [Amitesh Singh](https://github.com/amitesh-singh)
+ - Duaa Abbas
