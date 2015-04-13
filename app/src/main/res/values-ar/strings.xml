@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">نسخ/مشاركة الى الحافظة</string>
+    <string name="share_to_clipboard_activity">نسخ</string>
+    <string name="other">آخر</string>
+    <string name="error_no_data">تعذر ايجاد ما يمكن نسخه</string>
+    <string name="error_type_not_supported">تعذرت المشاركة, قم بالابلاغ</string>
+    <string name="copied">تم النسخ الى الحافظة</string>
+</resources>
