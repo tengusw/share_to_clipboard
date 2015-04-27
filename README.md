@@ -34,3 +34,4 @@ The following people have contributed code or translations to this project:
  - [ChunEon Park](https://github.com/hermet)
  - [Amitesh Singh](https://github.com/amitesh-singh)
  - Duaa Abbas
+ - [Jean-Philippe ANDRÉ](https://github.com/helkanen)
