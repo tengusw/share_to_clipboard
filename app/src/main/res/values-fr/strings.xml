@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Partager vers le Presse-papiers</string>
+    <string name="share_to_clipboard_activity">Presse-papiers</string>
+    <string name="other">Autre</string>
+    <string name="error_no_data">Rien à copier</string>
+    <string name="error_type_not_supported">Type de partage non supporté, merci de rapporter aux développeurs</string>
+    <string name="copied">Copier vers le Presse-papiers</string>
+</resources>
