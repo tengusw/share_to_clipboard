@@ -33,6 +33,7 @@ public class shareToClipboardActivity extends Activity {
         Intent intent = getIntent();
         String action = intent.getAction();
         String type = intent.getType();
+        String scheme = intent.getScheme();
 
         if (Intent.ACTION_SEND.equals(action) && type != null) {
             if (HTTP.PLAIN_TEXT_TYPE.equals(type))
@@ -41,8 +42,24 @@ public class shareToClipboardActivity extends Activity {
                 handleSendVCard(intent);
             else
                 showToast(getString(R.string.error_type_not_supported));
+        } else if ((Intent.ACTION_VIEW.equals(action) || Intent.ACTION_DIAL.equals(action))
+                && (scheme.equals("tel") || scheme.equals("mailto"))) {
+            handleSchemeSpecificPart(intent);
         }
         finish();
+    }
+
+    private void handleSchemeSpecificPart(Intent intent) {
+        String dataString;
+        String inputURI = intent.getDataString();
+        if (inputURI != null) {
+            Uri uri = Uri.parse(Uri.decode(inputURI));
+            dataString = uri.getSchemeSpecificPart();
+            copyToClipboard(dataString);
+        } else {
+            showToast(getString(R.string.error_no_data));
+        }
+
     }
 
     private void handleSendVCard(Intent intent)
