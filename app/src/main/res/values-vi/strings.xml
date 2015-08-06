@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Chia sẻ đến Clipboard</string>
+    <string name="share_to_clipboard_activity">Clipboard</string>
+    <string name="other">Khác</string>
+    <string name="error_no_data">Không có nội dung sao chép</string>
+    <string name="error_type_not_supported">Kiểu chia sẻ không được hỗ trợ, xin hãy liên lạc với người phát triển chương trình</string>
+    <string name="copied">Đã sao chép vào clipboard</string>
+</resources>
