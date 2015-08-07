@@ -35,3 +35,4 @@ The following people have contributed code or translations to this project:
  - [Amitesh Singh](https://github.com/amitesh-singh)
  - Duaa Abbas
  - [Jean-Philippe ANDRÉ](https://github.com/helkanen)
+ - [Thiep Ha](https://github.com/thiep)
