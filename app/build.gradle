@@ -8,8 +8,8 @@ android {
         applicationId "com.tengu.sharetoclipboard"
         minSdkVersion 8
         targetSdkVersion 21
-        versionCode 9
-        versionName "1.1.0"
+        versionCode 10
+        versionName "1.1.1"
     }
     buildTypes {
         release {
