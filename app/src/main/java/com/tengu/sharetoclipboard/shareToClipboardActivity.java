@@ -34,7 +34,6 @@ public class shareToClipboardActivity extends Activity {
         String action = intent.getAction();
         String type = intent.getType();
         String scheme = intent.getScheme();
-
         if (Intent.ACTION_SEND.equals(action) && type != null) {
             if (HTTP.PLAIN_TEXT_TYPE.equals(type))
                 handleSendText(intent);
@@ -50,14 +49,18 @@ public class shareToClipboardActivity extends Activity {
     }
 
     private void handleSchemeSpecificPart(Intent intent) {
-        String dataString;
-        String inputURI = intent.getDataString();
-        if (inputURI != null) {
-            Uri uri = Uri.parse(Uri.decode(inputURI));
+        String dataString = "";
+        Uri uri = intent.getData();
+
+        if (uri != null) {
             dataString = uri.getSchemeSpecificPart();
+        }
+
+        if (dataString.length() > 0) {
             copyToClipboard(dataString);
         } else {
-            showToast(getString(R.string.error_no_data));
+            //If no scheme retrieved, try get it as send intent
+            handleSendText(intent);
         }
 
     }
