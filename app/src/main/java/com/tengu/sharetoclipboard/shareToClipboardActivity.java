@@ -26,7 +26,7 @@ import ezvcard.property.Telephone;
 
 public class shareToClipboardActivity extends Activity {
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // Get intent, action and MIME type
@@ -62,8 +62,7 @@ public class shareToClipboardActivity extends Activity {
 
     }
 
-    private void handleSendVCard(Intent intent)
-    {
+    private void handleSendVCard(Intent intent) {
         Uri uri = (Uri) intent.getExtras().get(Intent.EXTRA_STREAM);
         InputStream stream = null;
         ContentResolver cr = getContentResolver();
@@ -78,7 +77,7 @@ public class shareToClipboardActivity extends Activity {
         StringBuffer fileContent = new StringBuffer("");
         int ch;
         try {
-            while((ch = stream.read()) != -1) {
+            while ((ch = stream.read()) != -1) {
                 fileContent.append((char) ch);
             }
             stream.close();
@@ -89,21 +88,21 @@ public class shareToClipboardActivity extends Activity {
         }
         VCard vcard = Ezvcard.parse(new String(fileContent)).first();
         String fullName = vcard.getFormattedName().getValue();
-        String phone ="";
-        for (Telephone telephone : vcard.getTelephoneNumbers()){
-            phone+= arrayToString(telephone.getTypes().toArray()) + ": " + telephone.getText() + "\n";
+        String phone = "";
+        for (Telephone telephone : vcard.getTelephoneNumbers()) {
+            phone += arrayToString(telephone.getTypes().toArray()) + ": " + telephone.getText() + "\n";
         }
-        String emailString ="";
-        for (Email email: vcard.getEmails()){
-            emailString+= arrayToString(email.getTypes().toArray()) + ": " + email.getValue() + "\n";
+        String emailString = "";
+        for (Email email : vcard.getEmails()) {
+            emailString += arrayToString(email.getTypes().toArray()) + ": " + email.getValue() + "\n";
         }
-        copyToClipboard(fullName +"\n"+phone+emailString);
+        copyToClipboard(fullName + "\n" + phone + emailString);
 
     }
 
-    private String arrayToString(Object[] objectArray){
+    private String arrayToString(Object[] objectArray) {
         String return_value = "";
-        for(Object value: objectArray){
+        for (Object value : objectArray) {
             if (!value.toString().equals("pref"))
                 return_value += value.toString().substring(0, 1).toUpperCase() + value.toString().substring(1).toLowerCase();
         }
@@ -122,17 +121,15 @@ public class shareToClipboardActivity extends Activity {
 
         if (sharedText != null) {
             copyToClipboard(sharedText);
-        }
-        else if (sharedTitle != null) {
+        } else if (sharedTitle != null) {
             copyToClipboard(sharedTitle);
-        }
-        else {
+        } else {
             showToast(getString(R.string.error_no_data));
         }
     }
 
     @SuppressLint("NewApi")
-    private void copyToClipboard(String clipboardText){
+    private void copyToClipboard(String clipboardText) {
         int sdk = Build.VERSION.SDK_INT;
         if (sdk < Build.VERSION_CODES.HONEYCOMB) {
             android.text.ClipboardManager clipboard = (android.text.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
