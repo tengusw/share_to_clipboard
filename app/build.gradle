@@ -11,6 +11,11 @@ android {
         versionCode 11
         versionName "1.2.0"
     }
+
+	lintOptions {
+		 disable 'MissingTranslation'
+	}
+
     buildTypes {
         release {
             minifyEnabled false
