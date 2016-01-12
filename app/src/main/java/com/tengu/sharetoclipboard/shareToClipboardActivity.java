@@ -13,8 +13,6 @@ import android.os.Bundle;
 import android.provider.ContactsContract.Contacts;
 import android.widget.Toast;
 
-import org.apache.http.protocol.HTTP;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,6 +23,9 @@ import ezvcard.property.Email;
 import ezvcard.property.Telephone;
 
 public class shareToClipboardActivity extends Activity {
+
+    private static final String PLAIN_TEXT_TYPE = "text/plain";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +36,7 @@ public class shareToClipboardActivity extends Activity {
         String type = intent.getType();
         String scheme = intent.getScheme();
         if (Intent.ACTION_SEND.equals(action) && type != null) {
-            if (HTTP.PLAIN_TEXT_TYPE.equals(type))
+            if (PLAIN_TEXT_TYPE.equals(type))
                 handleSendText(intent);
             else if (Contacts.CONTENT_VCARD_TYPE.equals(type))
                 handleSendVCard(intent);
