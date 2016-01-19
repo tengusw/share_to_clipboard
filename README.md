@@ -36,3 +36,4 @@ The following people have contributed code or translations to this project:
  - Duaa Abbas
  - [Jean-Philippe ANDRÉ](https://github.com/helkanen)
  - [Thiep Ha](https://github.com/thiep)
+ - [Olexandr Nesterenko](https://github.com/burunduk)
