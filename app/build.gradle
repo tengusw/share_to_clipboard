@@ -28,5 +28,4 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.googlecode.ez-vcard:ez-vcard:0.9.6'
     compile 'com.android.support:cardview-v7:23.1.1'
-    compile 'com.android.support:appcompat-v7:23.1.1'
 }
