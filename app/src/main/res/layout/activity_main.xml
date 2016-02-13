@@ -55,6 +55,7 @@
                         android:layout_weight="1"
                         android:gravity="center_vertical"
                         android:text="@string/apps_by_tengu"
+                        android:textColor="@color/gray600"
                         android:textSize="@dimen/card_view_title"
                         android:textStyle="bold" />
 
@@ -99,6 +100,7 @@
                         android:layout_margin="10dp"
                         android:layout_weight="1"
                         android:text="@string/about"
+                        android:textColor="@color/gray600"
                         android:textSize="@dimen/card_view_title"
                         android:textStyle="bold" />
 
@@ -110,6 +112,7 @@
                         android:layout_weight="1"
                         android:autoLink="all"
                         android:text="@string/about_content"
+                        android:textColor="@color/gray600"
                         android:textSize="@dimen/card_view_content" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
