@@ -1,7 +1,7 @@
 #Changelog
 
 ## Version 1.5.0
-* Add option to remove the application launcher icon.
+* Added an option to remove the application launcher icon.
 
 ## Version 1.4.0
 * Reduced apk file size (removed appcompat library).
