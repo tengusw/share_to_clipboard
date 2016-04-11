@@ -8,7 +8,7 @@
 
 ## Version 1.3.0
 * Improved about page style
-* Translation: Added Ukranian translation
+* Translation: Added Ukranian
 
 ## Version 1.2.0
 * Add a launcher and an about activity that explains about the app.
