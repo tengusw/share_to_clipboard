@@ -22,7 +22,7 @@ import ezvcard.VCard;
 import ezvcard.property.Email;
 import ezvcard.property.Telephone;
 
-public class shareToClipboardActivity extends Activity {
+public class ShareToClipboardActivity extends Activity {
 
     private static final String PLAIN_TEXT_TYPE = "text/plain";
 

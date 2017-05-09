@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.Transparent">
         <activity
-            android:name=".shareToClipboardActivity"
+            android:name=".ShareToClipboardActivity"
             android:label="@string/share_to_clipboard_activity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
