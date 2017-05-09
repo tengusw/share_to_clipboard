@@ -124,6 +124,9 @@ public class ShareToClipboardActivity extends Activity {
         String sharedTitle = intent.getStringExtra(Intent.EXTRA_SUBJECT);
 
         if (sharedText != null) {
+            if (sharedTitle != null && !sharedText.contains(sharedTitle)) {
+                sharedText = String.format("%s - %s", sharedTitle, sharedText);
+            }
             copyToClipboard(sharedText);
         } else if (sharedTitle != null) {
             copyToClipboard(sharedTitle);
