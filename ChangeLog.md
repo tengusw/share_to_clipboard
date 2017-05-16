@@ -1,5 +1,8 @@
 #Changelog
 
+## Version 1.6.0
+* Include title when copying a shared link.
+
 ## Version 1.5.0
 * Added an option to remove the application launcher icon.
 
