@@ -36,12 +36,13 @@ public class ShareToClipboardActivity extends Activity {
         String type = intent.getType();
         String scheme = intent.getScheme();
         if (Intent.ACTION_SEND.equals(action) && type != null) {
-            if (PLAIN_TEXT_TYPE.equals(type))
-                handleSendText(intent);
-            else if (Contacts.CONTENT_VCARD_TYPE.equals(type))
+            if (PLAIN_TEXT_TYPE.equals(type)) {
+                if (!handleSendText(intent)) showToast(getString(R.string.error_no_data));
+            } else if (Contacts.CONTENT_VCARD_TYPE.equals(type)) {
                 handleSendVCard(intent);
-            else
+            } else if (!handleSendText(intent)) {
                 showToast(getString(R.string.error_type_not_supported));
+            }
         } else if ((Intent.ACTION_VIEW.equals(action) || Intent.ACTION_DIAL.equals(action))
                 && (scheme.equals("tel") || scheme.equals("mailto"))) {
             handleSchemeSpecificPart(intent);
@@ -63,7 +64,6 @@ public class ShareToClipboardActivity extends Activity {
             //If no scheme retrieved, try get it as send intent
             handleSendText(intent);
         }
-
     }
 
     private void handleSendVCard(Intent intent) {
@@ -110,8 +110,7 @@ public class ShareToClipboardActivity extends Activity {
             if (!value.toString().equals("pref"))
                 return_value += value.toString().substring(0, 1).toUpperCase() + value.toString().substring(1).toLowerCase();
         }
-        if (return_value.equals(""))
-            return_value = getString(R.string.other);
+        if (return_value.equals("")) return_value = getString(R.string.other);
         return return_value;
     }
 
@@ -119,20 +118,19 @@ public class ShareToClipboardActivity extends Activity {
         Toast.makeText(this, text, Toast.LENGTH_LONG).show();
     }
 
-    private void handleSendText(Intent intent) {
+    private boolean handleSendText(Intent intent) {
         String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
         String sharedTitle = intent.getStringExtra(Intent.EXTRA_SUBJECT);
-
+        if (sharedText == null && sharedTitle == null) return false;
         if (sharedText != null) {
             if (sharedTitle != null && !sharedText.contains(sharedTitle)) {
                 sharedText = String.format("%s - %s", sharedTitle, sharedText);
             }
             copyToClipboard(sharedText);
-        } else if (sharedTitle != null) {
-            copyToClipboard(sharedTitle);
         } else {
-            showToast(getString(R.string.error_no_data));
+            copyToClipboard(sharedTitle);
         }
+        return true;
     }
 
     @SuppressLint("NewApi")
@@ -150,5 +148,4 @@ public class ShareToClipboardActivity extends Activity {
         }
         showToast(getString(R.string.copied));
     }
-
 }
