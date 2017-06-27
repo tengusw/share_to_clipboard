@@ -41,3 +41,4 @@ The following people have contributed code or translations to this project:
  - [Jean-Philippe ANDRÉ](https://github.com/helkanen)
  - [Thiep Ha](https://github.com/thiep)
  - [Olexandr Nesterenko](https://github.com/burunduk)
+ - [Tajnymag](https://github.com/Tajnymag)
