@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Udostępnij do Schowka</string>
+    <string name="share_to_clipboard_activity">Schowek</string>
+    <string name="other">Inne</string>
+    <string name="error_no_data">Nie ma niczego do skopiowania</string>
+    <string name="error_type_not_supported">Typ udostępnianego obiektu nie jest obsługiwany, zgłoś to deweloperom</string>
+    <string name="copied">Skopiowano do schowka</string>
+    <string name="apps_by_tengu">Aplikacje Tengu</string>
+    <string name="remove_launcher">Usuń ikonę</string>
+    <string name="remove_launcher_message">Ikona aplikacji zostanie usunięta z systemowej listy aplikacji.\nAby przywrócić ikonę, usuń aplikację i zainstaluj ją ponownie.</string>
+</resources>
