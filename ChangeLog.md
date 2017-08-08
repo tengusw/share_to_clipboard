@@ -1,5 +1,11 @@
 #Changelog
 
+## Version 1.6.2
+* Translation: Added Polish
+
+## Version 1.6.1
+* Fixed handling of all text mime-types, even unknown ones.
+
 ## Version 1.6.0
 * Include title when copying a shared link.
 
