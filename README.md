@@ -43,3 +43,4 @@ The following people have contributed code or translations to this project:
  - [Olexandr Nesterenko](https://github.com/burunduk)
  - [Tajnymag](https://github.com/Tajnymag)
  - [wwasiak](https://github.com/wwasiak)
+ - [Credomo](https://github.com/Credomo)
