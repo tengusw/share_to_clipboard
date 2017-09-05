@@ -1,5 +1,9 @@
 #Changelog
 
+## Version 1.7.0
+* Added a setting option to include/exclude link title when sharing.
+* Translation: Updated French
+
 ## Version 1.6.2
 * Translation: Added Polish
 
