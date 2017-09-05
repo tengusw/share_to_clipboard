@@ -11,6 +11,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+
+import com.tengu.sharetoclipboard.Utils.PreferenceUtil;
 
 public class MainActivity extends Activity {
 
@@ -48,6 +52,19 @@ public class MainActivity extends Activity {
                         })
                         .setNegativeButton(android.R.string.cancel, null)
                         .create().show();
+            }
+        });
+
+        initShowTitleCheckBox();
+    }
+
+    private void initShowTitleCheckBox() {
+        CheckBox cb =  ((CheckBox)findViewById(R.id.showTitleOnShare));
+        cb.setChecked(PreferenceUtil.shouldShowTitle(this));
+        cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                PreferenceUtil.setShowTitle(MainActivity.this, isChecked);
             }
         });
     }

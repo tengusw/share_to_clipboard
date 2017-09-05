@@ -1,5 +1,4 @@
 <resources>
-
     <style name="Theme.Transparent" parent="android:Theme">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -7,5 +6,31 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="CardView.Title">
+        <item name="android:textSize">@dimen/card_view_title</item>
+        <item name="android:textColor">@color/cardview_text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="CardView.Content">
+        <item name="android:textSize">@dimen/card_view_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/cardview_text_color</item>
+    </style>
+
+    <style name="CardView.CheckBox" parent="CardView.Content">
+        <item name="android:layout_gravity">start</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <style name="CardView">
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
     </style>
 </resources>

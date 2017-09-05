@@ -13,6 +13,8 @@ import android.os.Bundle;
 import android.provider.ContactsContract.Contacts;
 import android.widget.Toast;
 
+import com.tengu.sharetoclipboard.Utils.PreferenceUtil;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -123,7 +125,9 @@ public class ShareToClipboardActivity extends Activity {
         String sharedTitle = intent.getStringExtra(Intent.EXTRA_SUBJECT);
         if (sharedText == null && sharedTitle == null) return false;
         if (sharedText != null) {
-            if (sharedTitle != null && !sharedText.contains(sharedTitle)) {
+            if (sharedTitle != null &&
+                    !sharedText.contains(sharedTitle) &&
+                    PreferenceUtil.shouldShowTitle(this)) {
                 sharedText = String.format("%s - %s", sharedTitle, sharedText);
             }
             copyToClipboard(sharedText);

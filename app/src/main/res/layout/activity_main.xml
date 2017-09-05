@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/primary50"
-    android:orientation="vertical"
-    tools:context="com.tengu.sharetoclipboard.MainActivity">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/primary50"
+              android:orientation="vertical"
+              tools:context="com.tengu.sharetoclipboard.MainActivity">
 
     <TextView
         android:id="@+id/toolbar_title"
@@ -18,27 +18,26 @@
         android:text="@string/app_name"
         android:textColor="@android:color/white"
         android:textSize="22sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/primary50"
-            android:orientation="vertical"
-            tools:context="com.tengu.sharetoclipboard.MainActivity">
+                      xmlns:tools="http://schemas.android.com/tools"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@color/primary50"
+                      android:orientation="vertical"
+                      tools:context="com.tengu.sharetoclipboard.MainActivity">
 
-            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/cardViewTengu"
+                style="@style/CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
                 card_view:cardCornerRadius="4dp">
 
                 <LinearLayout
@@ -49,15 +48,12 @@
 
                     <TextView
                         android:id="@+id/textViewInstrument"
+                        style="@style/CardView.Title"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_margin="10dp"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:text="@string/apps_by_tengu"
-                        android:textColor="@color/gray600"
-                        android:textSize="@dimen/card_view_title"
-                        android:textStyle="bold" />
+                        android:text="@string/apps_by_tengu"/>
 
 
                     <LinearLayout
@@ -72,47 +68,67 @@
                             android:layout_width="125dp"
                             android:layout_height="125dp"
                             android:contentDescription="@string/app_name"
-                            android:src="@drawable/ic_tengu" />
+                            android:src="@drawable/ic_tengu"/>
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/cardViewAbout"
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                style="@style/CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@color/accent500"
                 card_view:cardCornerRadius="4dp">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/accent500"
+                    android:orientation="vertical">
+                    <TextView
+                        style="@style/CardView.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@string/settings"/>
+                    <CheckBox
+                        android:id="@+id/showTitleOnShare"
+                        style="@style/CardView.CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/show_link_title"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardViewAbout"
+                style="@style/CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/accent500"
+                card_view:cardCornerRadius="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/CardView.Title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="@string/about"
-                        android:textColor="@color/gray600"
-                        android:textSize="@dimen/card_view_title"
-                        android:textStyle="bold" />
+                        android:text="@string/about"/>
 
                     <TextView
+                        style="@style/CardView.Content"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
                         android:autoLink="all"
-                        android:text="@string/about_content"
-                        android:textColor="@color/gray600"
-                        android:textSize="@dimen/card_view_content" />
+                        android:text="@string/about_content"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -125,8 +141,8 @@
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:text="@string/remove_launcher"
-                android:textColor="@color/gray600"
-                android:textSize="@dimen/card_view_content" />
+                android:textColor="@color/cardview_text_color"
+                android:textSize="@dimen/card_view_content"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
