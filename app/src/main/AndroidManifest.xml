@@ -17,6 +17,7 @@
 
                 <data android:mimeType="text/plain"/>
                 <data android:mimeType="text/x-vcard"/>
+                <data android:mimeType="message/rfc822"/>
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>

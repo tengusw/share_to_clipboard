@@ -27,6 +27,7 @@ import ezvcard.property.Telephone;
 public class ShareToClipboardActivity extends Activity {
 
     private static final String PLAIN_TEXT_TYPE = "text/plain";
+    private static final String RFC822_MESSAGE_TYPE = "message/rfc822";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,8 @@ public class ShareToClipboardActivity extends Activity {
                 if (!handleSendText(intent)) showToast(getString(R.string.error_no_data));
             } else if (Contacts.CONTENT_VCARD_TYPE.equals(type)) {
                 handleSendVCard(intent);
+            } else if (RFC822_MESSAGE_TYPE.equals(type)) {
+                if (!handleRfc822Message(intent)) showToast(getString(R.string.error_no_data));
             } else if (!handleSendText(intent)) {
                 showToast(getString(R.string.error_type_not_supported));
             }
@@ -107,13 +110,13 @@ public class ShareToClipboardActivity extends Activity {
     }
 
     private String arrayToString(Object[] objectArray) {
-        String return_value = "";
+        String returnValue = "";
         for (Object value : objectArray) {
             if (!value.toString().equals("pref"))
-                return_value += value.toString().substring(0, 1).toUpperCase() + value.toString().substring(1).toLowerCase();
+                returnValue += value.toString().substring(0, 1).toUpperCase() + value.toString().substring(1).toLowerCase();
         }
-        if (return_value.equals("")) return_value = getString(R.string.other);
-        return return_value;
+        if (returnValue.equals("")) returnValue = getString(R.string.other);
+        return returnValue;
     }
 
     private void showToast(String text) {
@@ -121,20 +124,41 @@ public class ShareToClipboardActivity extends Activity {
     }
 
     private boolean handleSendText(Intent intent) {
+        String text = getSendTextString(intent);
+        if (text != null) copyToClipboard(text);
+        return text != null;
+    }
+
+    private boolean handleRfc822Message(Intent intent) {
+        if (!intent.getExtras().containsKey(Intent.EXTRA_EMAIL)) return handleSendText(intent);
+
+        String[] emails = intent.getStringArrayExtra(Intent.EXTRA_EMAIL);
+        if (emails.length == 0) return handleSendText(intent);
+
+        String email = emails[0];
+        for (int i = 1; i < emails.length; i++) {
+            email = ", " + emails[i];
+        }
+        String text = getSendTextString(intent);
+        String sharedText = email + (text != null ? "\n" + text : "");
+        copyToClipboard(sharedText);
+        return true;
+    }
+
+    private String getSendTextString(Intent intent) {
         String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
         String sharedTitle = intent.getStringExtra(Intent.EXTRA_SUBJECT);
-        if (sharedText == null && sharedTitle == null) return false;
+        if (sharedText == null && sharedTitle == null) return null;
         if (sharedText != null) {
             if (sharedTitle != null &&
                     !sharedText.contains(sharedTitle) &&
                     PreferenceUtil.shouldShowTitle(this)) {
                 sharedText = String.format("%s - %s", sharedTitle, sharedText);
             }
-            copyToClipboard(sharedText);
+            return sharedText;
         } else {
-            copyToClipboard(sharedTitle);
+            return sharedTitle;
         }
-        return true;
     }
 
     @SuppressLint("NewApi")
