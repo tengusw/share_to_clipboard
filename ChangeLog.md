@@ -1,5 +1,8 @@
 #Changelog
 
+## Version 1.8.0
+* Added supprt for message/rfc822 mime type (email).
+
 ## Version 1.7.0
 * Added a setting option to include/exclude link title when sharing.
 * Translation: Updated French
