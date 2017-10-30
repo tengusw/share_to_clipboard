@@ -44,3 +44,4 @@ The following people have contributed code or translations to this project:
  - [Tajnymag](https://github.com/Tajnymag)
  - [wwasiak](https://github.com/wwasiak)
  - [Credomo](https://github.com/Credomo)
+ - [Joseahfer](https://twitter.com/Joseahfer)
