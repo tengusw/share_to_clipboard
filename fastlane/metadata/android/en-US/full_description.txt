@@ -1,0 +1,11 @@
+Copy to clipboard straight from the Android "Share" menu.
+
+Hooks into the Android native Share system for seamless integration.
+
+No more annoying workarounds to do something that is so useful and essential.
+
+Unique to this app is that we also support sharing VCards (contact) and plan on adding many others.
+
+Also, unlike many other solutions, this one doesn't have any visual bugs and phantom windows, just click share to copy from any app, and paste anywhere you like!
+
+Thanks to many contributors, the app is available in many languages.
