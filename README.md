@@ -45,3 +45,7 @@ The following people have contributed code or translations to this project:
  - [wwasiak](https://github.com/wwasiak)
  - [Credomo](https://github.com/Credomo)
  - [Joseahfer](https://twitter.com/Joseahfer)
+
+## Donations
+
+If you'd like to donate, please [click here](https://tengu.it/donate/).
