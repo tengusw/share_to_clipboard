@@ -1,5 +1,9 @@
 #Changelog
 
+## Version 1.8.1
+* Translation: Updated Spanish
+* Added "fastlane" configs for F-Droid.
+
 ## Version 1.8.0
 * Added supprt for message/rfc822 mime type (email).
 
