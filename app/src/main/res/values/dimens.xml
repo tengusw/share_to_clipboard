@@ -4,4 +4,5 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="card_view_title">25sp</dimen>
     <dimen name="card_view_content">20sp</dimen>
+    <dimen name="card_radius">4dp</dimen>
 </resources>

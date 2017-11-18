@@ -47,6 +47,13 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ShareToOtherAppsActivity"
+            android:label="@string/share_to_clipboard_activity"
+            android:noHistory="true">
+        </activity>
+        <receiver android:name=".CancelNotificationReceiver"/>
     </application>
 
 </manifest>
