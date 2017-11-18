@@ -1,6 +1,5 @@
 package com.tengu.sharetoclipboard;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,6 +7,8 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -16,7 +17,7 @@ import android.widget.CompoundButton;
 
 import com.tengu.sharetoclipboard.Utils.PreferenceUtil;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     private static final String TENGU_URL = "http://tengu.it/android-apps";
 
@@ -59,7 +60,7 @@ public class MainActivity extends Activity {
     }
 
     private void initShowTitleCheckBox() {
-        CheckBox cb =  ((CheckBox)findViewById(R.id.showTitleOnShare));
+        CheckBox cb = ((CheckBox) findViewById(R.id.showTitleOnShare));
         cb.setChecked(PreferenceUtil.shouldShowTitle(this));
         cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -70,6 +71,11 @@ public class MainActivity extends Activity {
     }
 
     private void setUpToolbar() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
