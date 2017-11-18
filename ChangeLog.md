@@ -1,5 +1,9 @@
 #Changelog
 
+## Version 1.9.0
+* Change the confirmation toast to a headsup notification that allows you to reshare the link.
+* Add a donation link
+
 ## Version 1.8.1
 * Translation: Updated Spanish
 * Added "fastlane" configs for F-Droid.
