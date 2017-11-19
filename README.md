@@ -45,6 +45,7 @@ The following people have contributed code or translations to this project:
  - [wwasiak](https://github.com/wwasiak)
  - [Credomo](https://github.com/Credomo)
  - [Joseahfer](https://twitter.com/Joseahfer)
+ - [smichel17](https://github.com/smichel17)
 
 ## Donations
 
