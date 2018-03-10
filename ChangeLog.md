@@ -1,5 +1,8 @@
 #Changelog
 
+## Version 1.10.0
+* Add a setting to disable the notification
+
 ## Version 1.9.0
 * Change the confirmation toast to a headsup notification that allows you to reshare the link.
 * Add a donation link
