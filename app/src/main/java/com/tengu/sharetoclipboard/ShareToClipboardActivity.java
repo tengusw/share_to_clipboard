@@ -176,6 +176,8 @@ public class ShareToClipboardActivity extends Activity {
             clipboard.setPrimaryClip(clip);
         }
 
-        NotificationUtil.createNotification(this);
+        if (PreferenceUtil.shouldDisplayNotification(this)) {
+            NotificationUtil.createNotification(this);
+        }
     }
 }

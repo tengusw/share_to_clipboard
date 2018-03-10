@@ -10,6 +10,7 @@ import android.preference.PreferenceManager;
 
 public class PreferenceUtil {
     private static final String SHOW_TITLE_KEY = "show_title";
+    private static final String DISPLAY_NOTIFICATION_KEY = "display_notification";
 
     public static void setShowTitle(Context context, boolean value) {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
@@ -21,5 +22,17 @@ public class PreferenceUtil {
     public static boolean shouldShowTitle(Context context) {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
         return sharedPref.getBoolean(SHOW_TITLE_KEY, true);
+    }
+
+    public static void setDisplayNotification(Context context, boolean value) {
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putBoolean(DISPLAY_NOTIFICATION_KEY, value);
+        editor.commit();
+    }
+
+    public static boolean shouldDisplayNotification(Context context) {
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        return sharedPref.getBoolean(DISPLAY_NOTIFICATION_KEY, true);
     }
 }

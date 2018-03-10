@@ -34,4 +34,6 @@
     <string name="share_chooser_title">Share via</string>
     <string name="notification_title">Copied to clipboard</string>
     <string name="notification_content">Tap here to share with a different app</string>
+    <string name="display_notification_for_share">Display re-sharing notification
+    </string>
 </resources>

@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         initShowTitleCheckBox();
+
+        initDisplayNotificationCheckBox();
     }
 
     private void initShowTitleCheckBox() {
@@ -66,6 +68,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 PreferenceUtil.setShowTitle(MainActivity.this, isChecked);
+            }
+        });
+    }
+
+    private void initDisplayNotificationCheckBox() {
+        CheckBox cb = ((CheckBox) findViewById(R.id.displayNotification));
+        cb.setChecked(PreferenceUtil.shouldDisplayNotification(this));
+        cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                PreferenceUtil.setDisplayNotification(MainActivity.this, isChecked);
             }
         });
     }
