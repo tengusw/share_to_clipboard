@@ -28,7 +28,7 @@
         applications list.\nIn order to restore the icon, please uninstall and reinstall the app.
         \n* This may cause issues with some phone models.
     </string>
-    <string name="show_link_title">Include link title.</string>
+    <string name="show_link_title">Include link title</string>
     <string name="settings">Settings</string>
 
     <string name="share_chooser_title">Share via</string>
