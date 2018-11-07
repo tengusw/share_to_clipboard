@@ -16,7 +16,6 @@ Share to Clipboard is an Android app to copy clipboard straight from the share m
 ## Contributing
 
 Contributions of all types are more than welcomed!
-- Logo by @naufaldsg
 
 ### Translations
 
@@ -50,6 +49,7 @@ The following people have contributed code or translations to this project:
  - [Credomo](https://github.com/Credomo)
  - [Joseahfer](https://twitter.com/Joseahfer)
  - [smichel17](https://github.com/smichel17)
+ - [naufaldsg](https://github.com/naufaldsg)
 
 ## Donations
 
