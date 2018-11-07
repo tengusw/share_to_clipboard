@@ -1,3 +1,6 @@
+<img align="right" width="400" alt="Share to Clipboard" src="https://raw.githubusercontent.com/naufaldsg/share_to_clipboard/master/logo/sharetoclipboard-logotype-01.png">
+
+
 # Share to Clipboard
 
 Share to Clipboard is an Android app to copy clipboard straight from the share menu.
@@ -13,6 +16,7 @@ Share to Clipboard is an Android app to copy clipboard straight from the share m
 ## Contributing
 
 Contributions of all types are more than welcomed!
+- Logo by @naufaldsg
 
 ### Translations
 
