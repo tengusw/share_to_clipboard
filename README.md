@@ -1,4 +1,4 @@
-<img align="right" width="400" alt="Share to Clipboard" src="https://raw.githubusercontent.com/naufaldsg/share_to_clipboard/master/logo/sharetoclipboard-logotype-01.png">
+<img align="right" width="400" alt="Share to Clipboard" src="https://raw.githubusercontent.com/tengusw/share_to_clipboard/master/logo/sharetoclipboard-logotype-01.png">
 
 
 # Share to Clipboard
