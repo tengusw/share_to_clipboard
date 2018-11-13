@@ -1,5 +1,8 @@
 #Changelog
 
+## Version 1.11.0
+* Change to the new logo! \o/
+
 ## Version 1.10.0
 * Add a setting to disable the notification
 
