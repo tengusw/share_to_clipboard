@@ -7,9 +7,9 @@ android {
     defaultConfig {
         applicationId "com.tengu.sharetoclipboard"
         minSdkVersion 15
-        targetSdkVersion 25
-        versionCode 22
-        versionName "1.10.0"
+        targetSdkVersion 26
+        versionCode 23
+        versionName "1.11.0"
     }
 
 	lintOptions {
