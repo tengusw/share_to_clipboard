@@ -2,7 +2,31 @@
     <string name="app_name">Mit Zwischenablage teilen</string>
     <string name="share_to_clipboard_activity">Zwischenablage</string>
     <string name="other">Andere</string>
-    <string name="error_no_data">Nichts zum kopieren</string>
-    <string name="error_type_not_supported">Zu teilender Inhalt nicht erkannt, Entwickler kontaktieren</string>
-    <string name="copied">Zur Zwischenablage kopiert</string>
+    <string name="error_no_data">Nichts zum Kopieren</string>
+    <string name="error_type_not_supported">Zu teilender Inhalt nicht unterstützt, bitte Entwickler kontaktieren</string>
+    <string name="copied">In die Zwischenablage kopiert</string>
+    <string name="apps_by_tengu">Apps von Tengu</string>
+    <string name="about">Über</string>
+    <string name="about_content">Direkt aus dem Android „Teilen“ Menü in die Zwischenablage kopieren.
+        \n\nFür so etwas Nützliches und Essentielles ist keine lästige Behelfslösung mehr nötig.
+        \n\n<b>So funktioniert es:</b> Einfach eine beliebige App öffnen, z. B. den Browser, dann „Teilen“ drücken und „Zwischenablage“ auswählen. Jetzt einfach in ein beliebiges Textfeld gehen, lange drücken und im Pop-up Menü auf „Einfügen“ klicken. Das war es schon!
+        \n\nBesonders an dieser App ist die Unterstützung zum Teilen von VCards (Kontakt), weitere Funktionen sind geplant.
+        \n\nZudem enthält diese App, im Gegensatz zu den meisten anderen Lösungen, keine visuellen Fehler und Phantom Fenster. Klicke aus einer beliebigen App einfach auf teilen und füge das Kopierte irgendwo ein!
+        \n\nDank vielen Unterstützern ist die App in vielen Sprachen verfügbar.
+        \n\n\nKomplett Open Source, der Quellcode ist verfügbar unter:
+        \nhttps://github.com/tengusw/share_to_clipboard
+        \nWenn du ein Entwickler bist, begrüßen wir deine Unterstützung!
+        \n\nBitte informiere uns über jegliche Probleme, bevorzugt per E-Mail (android@tengu.it)
+        \n\nDu kannst die Entwicklung ebenfalls über folgenden Link unterstützen: https://tengu.it/donate/
+    </string>
+    <string name="remove_launcher">Vom Launcher entfernen</string>
+    <string name="remove_launcher_message">Das App Icon wird von der App Liste des Systems gelöscht.\nUm das Icon wiederherzustellen, bitte die App deinstallieren und wieder neu installieren.
+        \n* Das Entfernen von der App Liste verursacht bei einigen Telefon Modellen möglicherweise Probleme.
+    </string>
+    <string name="show_link_title">Link Titel beim Kopieren mit einbeziehen</string>
+    <string name="settings">Einstellungen</string>
+    <string name="share_chooser_title">Teile über</string>
+    <string name="notification_title">In die Zwischenablage kopiert</string>
+    <string name="notification_content">Hier klicken, um mit einer anderen App zu teilen</string>
+    <string name="display_notification_for_share">Zeige weiter-teilen Benachrichtigung</string>
 </resources>
