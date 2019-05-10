@@ -2,6 +2,7 @@ package com.tengu.sharetoclipboard.Utils;
 
 import android.app.Activity;
 import android.app.AlarmManager;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -23,14 +24,20 @@ import static android.R.attr.id;
  */
 
 public class NotificationUtil {
+    private static final String NOTIFICATION_CHANNEL = "general";
     private static final int NOTIFICATION_ID = 1;
     private static final int NOTIFICATION_DURATION = 4000;
 
     public static void createNotification(Activity activity) {
         NotificationManager notificationManager =
                 (NotificationManager) activity.getSystemService(Context.NOTIFICATION_SERVICE);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            notificationManager.createNotificationChannel(new NotificationChannel(NOTIFICATION_CHANNEL, activity.getString(R.string.notification_channel), NotificationManager.IMPORTANCE_DEFAULT));
+        }
+
         // Instantiate a Builder object.
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(activity);
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(activity, NOTIFICATION_CHANNEL);
         builder.setContentTitle(activity.getString(R.string.notification_title));
         builder.setContentText(activity.getString(R.string.notification_content));
         builder.setAutoCancel(true);
