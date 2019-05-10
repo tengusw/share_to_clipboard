@@ -1,0 +1,2 @@
+* Add support for notification channels.
+* Update German translation
