@@ -1,5 +1,10 @@
 #Changelog
 
+## Version 1.12.0
+* Add support for notification channels.
+* Update German translation
+* Update gradle and compile sdk
+
 ## Version 1.11.0
 * Change to the new logo! \o/
 
