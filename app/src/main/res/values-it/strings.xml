@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Condividi negli Appunti</string>
+    <string name="share_to_clipboard_activity">Appunti</string>
+    <string name="other">Altro</string>
+    <string name="error_no_data">Niente da copiare</string>
+    <string name="error_type_not_supported">Tipo di condivisione non supportato, segnalalo agli sviluppatori
+    </string>
+    <string name="copied">Copiato negli appunti</string>
+    <string name="apps_by_tengu">App di Tengu</string>
+    <string name="about">Informazioni</string>
+    <string name="about_content">Copia negli appunti direttamende dal menu \"Condividi\" di Android.
+        \n\nNiente più soluzioni fastidiose per fare qualcosa di così utile ed essenziale.
+        \n\n<b>Utilizzo:</b> apri un\'app, per esempio il browser, premi \"Condividi\", e
+        scegli \"Condividi negli Appunti\". Ora tieni premuto in un campo di testo e nel menu a comparsa
+        premi \"Incolla\". Ecco tutto!\n\nEsclusivo di quest\'app è il supporto alla condivisione di
+        vCard (contatti) e ce ne sono molti altri in programma.
+        \n\nInoltre, a differenza di altre soluzioni, questa non ha problemi grafici e finestre
+        fantasma. Premi solamente \"Condividi\" per copiare da qualsiasi app, e incolla dove vuoi!
+        \n\nGrazie a molteplici collaboratori, l\'app è disponibile in molte lingue.
+        \n\n\nCompletamente open source, con codice sorgente disponibile su:
+        \nhttps://github.com/tengusw/share_to_clipboard
+        \nSe sei uno sviluppatore, ogni contributo è benvenuto!
+        \n\nFacci sapere riguardo a eventuali problemi, preferibilmente via email (android@tengu.it)
+        \n\nPuoi sostenere lo sviluppo attraverso: https://tengu.it/donate/
+    </string>
+    <string name="remove_launcher">Rimuovi Launcher</string>
+    <string name="remove_launcher_message">L\'icona dell\'applicazione verrà rimossa dalla lista delle
+        applicazioni di sistema.\nPer ripristinare l\'icona, disinstallare e reinstallare l\'app.
+        \n* Questo potrebbe causare problemi per qualche dispositivo.
+    </string>
+    <string name="show_link_title">Includi Titolo Link</string>
+    <string name="settings">Impostazioni</string>
+
+    <string name="share_chooser_title">Condividi con</string>
+    <string name="notification_channel">Generale</string>
+    <string name="notification_title">Copiato negli Appunti</string>
+    <string name="notification_content">Premi qui per condividere con un\'altra app</string>
+    <string name="display_notification_for_share">Mostra Notifica di Ri-Condivisione
+    </string>
+</resources>
