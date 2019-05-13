@@ -1,5 +1,8 @@
 #Changelog
 
+## Version 1.13.0
+* Translation: Added Italian
+
 ## Version 1.12.0
 * Add support for notification channels.
 * Update German translation
