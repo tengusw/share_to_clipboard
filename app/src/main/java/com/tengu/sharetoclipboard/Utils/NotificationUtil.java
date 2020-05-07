@@ -1,23 +1,18 @@
 package com.tengu.sharetoclipboard.Utils;
 
 import android.app.Activity;
-import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
-import android.os.SystemClock;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import android.widget.Toast;
 
-import com.tengu.sharetoclipboard.CancelNotificationReceiver;
 import com.tengu.sharetoclipboard.R;
 import com.tengu.sharetoclipboard.ShareToOtherAppsActivity;
-
-import static android.R.attr.id;
 
 /**
  * Created by tal on 18/11/17.
@@ -41,6 +36,7 @@ public class NotificationUtil {
         builder.setContentTitle(activity.getString(R.string.notification_title));
         builder.setContentText(activity.getString(R.string.notification_content));
         builder.setAutoCancel(true);
+        builder.setTimeoutAfter(NOTIFICATION_DURATION);
         Intent intent = new Intent(activity, ShareToOtherAppsActivity.class);
         Intent clonedIntent = new Intent(activity.getIntent());
         intent.putExtra("intent", clonedIntent);
@@ -65,23 +61,5 @@ public class NotificationUtil {
         }
 
         notificationManager.notify(NOTIFICATION_ID, builder.build());
-
-        // set up alarm
-        AlarmManager alarmManager = (AlarmManager) activity.getSystemService(Context.ALARM_SERVICE);
-        Intent receiver = new Intent(activity, CancelNotificationReceiver.class);
-        receiver.setAction("com.your.package.action.CANCEL_NOTIFICATION");
-        receiver.putExtra("notification_id", id);
-        PendingIntent pi = PendingIntent.getBroadcast(
-                activity, 0, receiver, PendingIntent.FLAG_UPDATE_CURRENT);
-
-        alarmManager.set(
-                AlarmManager.ELAPSED_REALTIME,
-                SystemClock.elapsedRealtime() + NOTIFICATION_DURATION,
-                pi);
-    }
-
-    public static void cancelNotifications(Context context) {
-        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
-        notificationManager.cancel(NOTIFICATION_ID);
     }
 }
