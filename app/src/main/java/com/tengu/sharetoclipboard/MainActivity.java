@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initShowTitleCheckBox() {
-        CheckBox cb = ((CheckBox) findViewById(R.id.showTitleOnShare));
+        CheckBox cb = findViewById(R.id.showTitleOnShare);
         cb.setChecked(PreferenceUtil.shouldShowTitle(this));
         cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDisplayNotificationCheckBox() {
-        CheckBox cb = ((CheckBox) findViewById(R.id.displayNotification));
+        CheckBox cb = findViewById(R.id.displayNotification);
         cb.setChecked(PreferenceUtil.shouldDisplayNotification(this));
         cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setUpToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
