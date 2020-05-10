@@ -1,8 +1,37 @@
 <resources>
-    <string name="app_name">Compartilhe para área de transferência</string>
+    <string name="app_name">Compartilhar para Área de Transferência</string>
     <string name="share_to_clipboard_activity">Área de transferência</string>
     <string name="other">Outro</string>
     <string name="error_no_data">Nada para copiar</string>
-    <string name="error_type_not_supported">Tipo de compartilhamento não suportado, por favor contate os desenvolvedores</string>
+    <string name="error_type_not_supported">Não há suporte para este tipo de compartilhamento. Por favor entre em contato com os desenvolvedores</string>
     <string name="copied">Copiado para área de transferência</string>
+    <string name="apps_by_tengu">Apps by Tengu</string>
+    <string name="about">Sobre</string>
+    <string name="about_content">Copie informações direto do menu de compartilhamento do Android.
+        \n\n<b>Como usar:</b> abra qualquer app, por exemplo o seu navegador de internet, e
+        aperte o botão de compartilhar. Escolha a opção \Área de transferência\". Após
+        isso você pode colar esta informação em qualquer campo de texto. Pressione e segure por um
+        instante para trazer o menu de pop-up e selecione a opção \"Colar\". É só isso!\n\nEste
+        app também permite compartilhar contatos (vCards) e planejamos adicionar outros tipos
+        de compartilhamento no futuro.\n\nOutra vantagem deste app é que ele não tem quebras
+        visuais ou janelas fantasma. Simplesmente compartilhe a partir de qualquer outro app
+        e escreva o resultado onde quiser!\n\nGraças aos nossos colaboradores, este app está
+        disponível em diversas línguas.\n\n\nEste software é livre e seu código fonte está
+        disponível em https://github.com/tengusw/share_to_clipboard. Contribuições são bem vindas!
+        \n\nCaso você encontre algum problema, por favor nos avise por e-mail (tengu@stosb.com).
+        \n\nOutra forma de contribuir para o desenvolvimento deste app é fazer uma doação monetária: https://stosb.com/tengu/donate/
+    </string>
+    <string name="remove_launcher">Remover ícone</string>
+    <string name="remove_launcher_message">O ícone deste app será removido da lista de apps.
+        \nPara reativar o ícone, desinstale e reinstale este app.
+        \n* Esta mudança pode causar problemas em alguns aparelhos.
+    </string>
+    <string name="show_link_title">Incluir título</string>
+    <string name="settings">Configurações</string>
+
+    <string name="share_chooser_title">Compartilhar para</string>
+    <string name="notification_channel">Geral</string>
+    <string name="notification_title">Copiado para a área de transferência</string>
+    <string name="notification_content">Aperte aqui para recompartilhar para outro app</string>
+    <string name="display_notification_for_share">Notificação para recompartilhamento</string>
 </resources>
