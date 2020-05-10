@@ -71,7 +71,7 @@ public class ShareToClipboardActivity extends Activity {
 
     private void handleSendVCard(Intent intent) {
         Uri uri = (Uri) intent.getExtras().get(Intent.EXTRA_STREAM);
-        InputStream stream = null;
+        InputStream stream;
         ContentResolver cr = getContentResolver();
         try {
             stream = cr.openInputStream(uri);
