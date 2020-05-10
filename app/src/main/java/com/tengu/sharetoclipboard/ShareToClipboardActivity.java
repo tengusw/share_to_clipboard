@@ -10,8 +10,8 @@ import android.os.Bundle;
 import android.provider.ContactsContract.Contacts;
 import android.widget.Toast;
 
-import com.tengu.sharetoclipboard.Utils.NotificationUtil;
-import com.tengu.sharetoclipboard.Utils.PreferenceUtil;
+import com.tengu.sharetoclipboard.utils.NotificationUtil;
+import com.tengu.sharetoclipboard.utils.PreferenceUtil;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

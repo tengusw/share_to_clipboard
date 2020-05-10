@@ -15,7 +15,7 @@ import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
-import com.tengu.sharetoclipboard.Utils.PreferenceUtil;
+import com.tengu.sharetoclipboard.utils.PreferenceUtil;
 
 public class MainActivity extends AppCompatActivity {
 
