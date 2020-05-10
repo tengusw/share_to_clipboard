@@ -20,8 +20,8 @@
         \n\n\nFully open source, with source code available at:
         \nhttps://github.com/tengusw/share_to_clipboard
         \nIf you are a developer, contributions are welcome!
-        \n\nPlease let us know about any issues, preferably by email (android@tengu.it)
-        \n\nYou can also support development using this link: https://tengu.it/donate/
+        \n\nPlease let us know about any issues, preferably by email (tengu@stosb.com)
+        \n\nYou can also support development using this link: https://stosb.com/tengu/donate/
     </string>
     <string name="remove_launcher">Remove Launcher</string>
     <string name="remove_launcher_message">The application icon will be removed from the system\'s

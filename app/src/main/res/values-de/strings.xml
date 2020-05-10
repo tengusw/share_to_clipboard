@@ -16,8 +16,8 @@
         \n\n\nKomplett Open Source, der Quellcode ist verfügbar unter:
         \nhttps://github.com/tengusw/share_to_clipboard
         \nWenn du ein Entwickler bist, begrüßen wir deine Unterstützung!
-        \n\nBitte informiere uns über jegliche Probleme, bevorzugt per E-Mail (android@tengu.it)
-        \n\nDu kannst die Entwicklung ebenfalls über folgenden Link unterstützen: https://tengu.it/donate/
+        \n\nBitte informiere uns über jegliche Probleme, bevorzugt per E-Mail (tengu@stosb.com)
+        \n\nDu kannst die Entwicklung ebenfalls über folgenden Link unterstützen: https://stosb.com/tengu/donate/
     </string>
     <string name="remove_launcher">Vom Launcher entfernen</string>
     <string name="remove_launcher_message">Das App Icon wird von der App Liste des Systems gelöscht.\nUm das Icon wiederherzustellen, bitte die App deinstallieren und wieder neu installieren.

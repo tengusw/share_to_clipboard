@@ -19,7 +19,7 @@ import com.tengu.sharetoclipboard.Utils.PreferenceUtil;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TENGU_URL = "http://tengu.it/android-apps";
+    private static final String TENGU_URL = "https://stosb.com/tengu/android-apps/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
