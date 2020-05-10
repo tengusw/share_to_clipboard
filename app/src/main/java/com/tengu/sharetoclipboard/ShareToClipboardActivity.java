@@ -17,8 +17,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
-import ezvcard.Ezvcard;
 import ezvcard.VCard;
+import ezvcard.io.text.VCardReader;
 import ezvcard.property.Email;
 import ezvcard.property.Telephone;
 
@@ -71,29 +71,23 @@ public class ShareToClipboardActivity extends Activity {
 
     private void handleSendVCard(Intent intent) {
         Uri uri = (Uri) intent.getExtras().get(Intent.EXTRA_STREAM);
-        InputStream stream;
-        ContentResolver cr = getContentResolver();
+
+        VCard vcard;
         try {
-            stream = cr.openInputStream(uri);
+            ContentResolver cr = getContentResolver();
+            InputStream stream = cr.openInputStream(uri);
+            VCardReader reader = new VCardReader(stream);
+            vcard = reader.readNext();
+            reader.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             showToast(getString(R.string.error_no_data));
             return;
-        }
-
-        StringBuilder fileContent = new StringBuilder();
-        try {
-            int ch;
-            while ((ch = stream.read()) != -1) {
-                fileContent.append((char) ch);
-            }
-            stream.close();
         } catch (IOException e) {
             e.printStackTrace();
             showToast(getString(R.string.error_no_data));
             return;
         }
-        VCard vcard = Ezvcard.parse(new String(fileContent)).first();
 
         StringBuilder output = new StringBuilder();
 
