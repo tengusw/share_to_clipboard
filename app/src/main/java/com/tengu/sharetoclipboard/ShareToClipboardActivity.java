@@ -1,14 +1,11 @@
 package com.tengu.sharetoclipboard;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.ContentResolver;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract.Contacts;
 import android.widget.Toast;
@@ -162,19 +159,10 @@ public class ShareToClipboardActivity extends Activity {
         }
     }
 
-    @SuppressLint("NewApi")
     private void copyToClipboard(String clipboardText) {
-        int sdk = Build.VERSION.SDK_INT;
-        if (sdk < Build.VERSION_CODES.HONEYCOMB) {
-            @SuppressWarnings("deprecation") android.text.ClipboardManager clipboard = (android.text.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-            clipboard.setText(clipboardText);
-        } else {
-            ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-            ClipData clip = ClipData
-                    .newPlainText(
-                            "text", clipboardText);
-            clipboard.setPrimaryClip(clip);
-        }
+        ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newPlainText("text", clipboardText);
+        clipboard.setPrimaryClip(clip);
 
         if (PreferenceUtil.shouldDisplayNotification(this)) {
             NotificationUtil.createNotification(this);
