@@ -16,7 +16,7 @@ public class PreferenceUtil {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putBoolean(SHOW_TITLE_KEY, value);
-        editor.commit();
+        editor.apply();
     }
 
     public static boolean shouldShowTitle(Context context) {
@@ -28,7 +28,7 @@ public class PreferenceUtil {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putBoolean(DISPLAY_NOTIFICATION_KEY, value);
-        editor.commit();
+        editor.apply();
     }
 
     public static boolean shouldDisplayNotification(Context context) {
