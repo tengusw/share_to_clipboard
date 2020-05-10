@@ -94,27 +94,46 @@ public class ShareToClipboardActivity extends Activity {
             return;
         }
         VCard vcard = Ezvcard.parse(new String(fileContent)).first();
-        String fullName = vcard.getFormattedName().getValue();
-        String phone = "";
-        for (Telephone telephone : vcard.getTelephoneNumbers()) {
-            phone += arrayToString(telephone.getTypes().toArray()) + ": " + telephone.getText() + "\n";
-        }
-        String emailString = "";
-        for (Email email : vcard.getEmails()) {
-            emailString += arrayToString(email.getTypes().toArray()) + ": " + email.getValue() + "\n";
-        }
-        copyToClipboard(fullName + "\n" + phone + emailString);
 
+        StringBuilder output = new StringBuilder();
+
+        String fullName = vcard.getFormattedName().getValue();
+        output.append(fullName);
+        output.append("\n");
+
+        for (Telephone telephone : vcard.getTelephoneNumbers()) {
+            output.append(arrayToString(telephone.getTypes().toArray()));
+            output.append(": ");
+            output.append(telephone.getText());
+            output.append("\n");
+        }
+
+        for (Email email : vcard.getEmails()) {
+            output.append(arrayToString(email.getTypes().toArray()));
+            output.append(": ");
+            output.append(email.getValue());
+            output.append("\n");
+        }
+
+        copyToClipboard(output.toString());
+    }
+
+    private String capitalize(String s) {
+        return s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase();
     }
 
     private String arrayToString(Object[] objectArray) {
-        String returnValue = "";
+        StringBuilder result = new StringBuilder();
         for (Object value : objectArray) {
-            if (!value.toString().equals("pref"))
-                returnValue += value.toString().substring(0, 1).toUpperCase() + value.toString().substring(1).toLowerCase();
+            String s = value.toString();
+            if (!s.equals("pref")) {
+                result.append(capitalize(s));
+            }
         }
-        if (returnValue.equals("")) returnValue = getString(R.string.other);
-        return returnValue;
+        if (result.length() == 0) {
+            result.append(getString(R.string.other));
+        }
+        return result.toString();
     }
 
     private void showToast(String text) {
