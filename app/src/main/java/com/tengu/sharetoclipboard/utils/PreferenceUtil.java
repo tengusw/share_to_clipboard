@@ -1,4 +1,4 @@
-package com.tengu.sharetoclipboard.Utils;
+package com.tengu.sharetoclipboard.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
