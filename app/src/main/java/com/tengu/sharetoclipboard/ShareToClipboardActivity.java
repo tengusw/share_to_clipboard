@@ -81,9 +81,9 @@ public class ShareToClipboardActivity extends Activity {
             return;
         }
 
-        StringBuffer fileContent = new StringBuffer("");
-        int ch;
+        StringBuilder fileContent = new StringBuilder();
         try {
+            int ch;
             while ((ch = stream.read()) != -1) {
                 fileContent.append((char) ch);
             }
