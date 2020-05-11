@@ -16,9 +16,11 @@ import com.tengu.sharetoclipboard.utils.PreferenceUtil;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 import ezvcard.VCard;
 import ezvcard.io.text.VCardReader;
+import ezvcard.parameter.VCardParameter;
 import ezvcard.property.Email;
 import ezvcard.property.Telephone;
 
@@ -96,14 +98,14 @@ public class ShareToClipboardActivity extends Activity {
         output.append("\n");
 
         for (Telephone telephone : vcard.getTelephoneNumbers()) {
-            output.append(arrayToString(telephone.getTypes().toArray()));
+            appendVCardTypes(output, telephone.getTypes());
             output.append(": ");
             output.append(telephone.getText());
             output.append("\n");
         }
 
         for (Email email : vcard.getEmails()) {
-            output.append(arrayToString(email.getTypes().toArray()));
+            appendVCardTypes(output, email.getTypes());
             output.append(": ");
             output.append(email.getValue());
             output.append("\n");
@@ -116,18 +118,15 @@ public class ShareToClipboardActivity extends Activity {
         return s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase();
     }
 
-    private String arrayToString(Object[] objectArray) {
-        StringBuilder result = new StringBuilder();
-        for (Object value : objectArray) {
-            String s = value.toString();
-            if (!s.equals("pref")) {
-                result.append(capitalize(s));
+    private void appendVCardTypes(StringBuilder output, List <? extends VCardParameter> types) {
+        if (types.isEmpty()) {
+            output.append(getString(R.string.other));
+        } else {
+            for (int i = 0; i < types.size(); i++) {
+                if (i > 0) output.append(",");
+                output.append(capitalize(types.get(i).toString()));
             }
         }
-        if (result.length() == 0) {
-            result.append(getString(R.string.other));
-        }
-        return result.toString();
     }
 
     private void showToast(String text) {
