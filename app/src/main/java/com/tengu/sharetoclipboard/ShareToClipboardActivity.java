@@ -145,13 +145,19 @@ public class ShareToClipboardActivity extends Activity {
         String[] emails = intent.getStringArrayExtra(Intent.EXTRA_EMAIL);
         if (emails.length == 0) return handleSendText(intent);
 
-        String email = emails[0];
-        for (int i = 1; i < emails.length; i++) {
-            email = ", " + emails[i];
+        StringBuilder output = new StringBuilder();
+        for (int i = 0; i < emails.length; i++) {
+            if (i > 0) output.append(", ");
+            output.append(emails[i]);
         }
+
         String text = getSendTextString(intent);
-        String sharedText = email + (text != null ? "\n" + text : "");
-        copyToClipboard(sharedText);
+        if (text != null) {
+            output.append("\n");
+            output.append(text);
+        }
+
+        copyToClipboard(output.toString());
         return true;
     }
 
