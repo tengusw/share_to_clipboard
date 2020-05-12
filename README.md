@@ -50,6 +50,7 @@ The following people have contributed code or translations to this project:
  - [Joseahfer](https://twitter.com/Joseahfer)
  - [smichel17](https://github.com/smichel17)
  - [naufaldsg](https://github.com/naufaldsg)
+ - [hugomg](https://github.com/hugomg)
 
 ## Donations
 
