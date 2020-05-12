@@ -27,7 +27,6 @@ import ezvcard.property.Telephone;
 public class ShareToClipboardActivity extends Activity {
 
     private static final String PLAIN_TEXT_TYPE = "text/plain";
-    private static final String RFC822_MESSAGE_TYPE = "message/rfc822";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,38 +36,16 @@ public class ShareToClipboardActivity extends Activity {
         Intent intent = getIntent();
         String action = intent.getAction();
         String type = intent.getType();
-        String scheme = intent.getScheme();
         if (Intent.ACTION_SEND.equals(action) && type != null) {
             if (PLAIN_TEXT_TYPE.equals(type)) {
                 if (!handleSendText(intent)) showToast(getString(R.string.error_no_data));
             } else if (Contacts.CONTENT_VCARD_TYPE.equals(type)) {
                 handleSendVCard(intent);
-            } else if (RFC822_MESSAGE_TYPE.equals(type)) {
-                if (!handleRfc822Message(intent)) showToast(getString(R.string.error_no_data));
             } else if (!handleSendText(intent)) {
                 showToast(getString(R.string.error_type_not_supported));
             }
-        } else if ((Intent.ACTION_VIEW.equals(action) || Intent.ACTION_DIAL.equals(action))
-                && (scheme.equals("tel") || scheme.equals("mailto"))) {
-            handleSchemeSpecificPart(intent);
         }
         finish();
-    }
-
-    private void handleSchemeSpecificPart(Intent intent) {
-        String dataString = "";
-        Uri uri = intent.getData();
-
-        if (uri != null) {
-            dataString = uri.getSchemeSpecificPart();
-        }
-
-        if (dataString.length() > 0) {
-            copyToClipboard(dataString);
-        } else {
-            //If no scheme retrieved, try get it as send intent
-            handleSendText(intent);
-        }
     }
 
     private void handleSendVCard(Intent intent) {
@@ -137,28 +114,6 @@ public class ShareToClipboardActivity extends Activity {
         String text = getSendTextString(intent);
         if (text != null) copyToClipboard(text);
         return text != null;
-    }
-
-    private boolean handleRfc822Message(Intent intent) {
-        if (!intent.getExtras().containsKey(Intent.EXTRA_EMAIL)) return handleSendText(intent);
-
-        String[] emails = intent.getStringArrayExtra(Intent.EXTRA_EMAIL);
-        if (emails.length == 0) return handleSendText(intent);
-
-        StringBuilder output = new StringBuilder();
-        for (int i = 0; i < emails.length; i++) {
-            if (i > 0) output.append(", ");
-            output.append(emails[i]);
-        }
-
-        String text = getSendTextString(intent);
-        if (text != null) {
-            output.append("\n");
-            output.append(text);
-        }
-
-        copyToClipboard(output.toString());
-        return true;
     }
 
     private String getSendTextString(Intent intent) {
