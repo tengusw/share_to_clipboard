@@ -12,30 +12,9 @@
             android:label="@string/share_to_clipboard_activity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND"/>
-
                 <category android:name="android.intent.category.DEFAULT"/>
-
                 <data android:mimeType="text/plain"/>
                 <data android:mimeType="text/x-vcard"/>
-                <data android:mimeType="message/rfc822"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <action android:name="android.intent.action.DIAL"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-
-                <data android:scheme="tel"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <action android:name="android.intent.action.SENDTO"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-
-                <data android:scheme="mailto"/>
             </intent-filter>
         </activity>
         <activity
