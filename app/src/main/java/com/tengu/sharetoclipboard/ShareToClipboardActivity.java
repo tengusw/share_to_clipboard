@@ -26,8 +26,6 @@ import ezvcard.property.Telephone;
 
 public class ShareToClipboardActivity extends Activity {
 
-    private static final String PLAIN_TEXT_TYPE = "text/plain";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,12 +35,14 @@ public class ShareToClipboardActivity extends Activity {
         String action = intent.getAction();
         String type = intent.getType();
         if (Intent.ACTION_SEND.equals(action) && type != null) {
-            if (PLAIN_TEXT_TYPE.equals(type)) {
-                if (!handleSendText(intent)) showToast(getString(R.string.error_no_data));
-            } else if (Contacts.CONTENT_VCARD_TYPE.equals(type)) {
-                handleSendVCard(intent);
-            } else if (!handleSendText(intent)) {
-                showToast(getString(R.string.error_type_not_supported));
+            if (type.startsWith("text/")) {
+                if (type.equals("text/plain")){
+                    handleSendText(intent, R.string.error_no_data);
+                } else if (type.equals("text/x-vcard")) {
+                    handleSendVCard(intent);
+                } else {
+                    handleSendText(intent, R.string.error_type_not_supported);
+                }
             }
         }
         finish();
@@ -110,10 +110,13 @@ public class ShareToClipboardActivity extends Activity {
         Toast.makeText(this, text, Toast.LENGTH_LONG).show();
     }
 
-    private boolean handleSendText(Intent intent) {
+    private void handleSendText(Intent intent, int err_msg) {
         String text = getSendTextString(intent);
-        if (text != null) copyToClipboard(text);
-        return text != null;
+        if (text != null) {
+            copyToClipboard(text);
+        } else {
+            showToast(getString(err_msg));
+        }
     }
 
     private String getSendTextString(Intent intent) {
