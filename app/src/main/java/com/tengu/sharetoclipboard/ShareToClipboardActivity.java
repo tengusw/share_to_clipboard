@@ -142,6 +142,8 @@ public class ShareToClipboardActivity extends Activity {
 
         if (PreferenceUtil.shouldDisplayNotification(this)) {
             NotificationUtil.createNotification(this);
+        } else {
+            showToast(getString(R.string.notification_title));
         }
     }
 }
