@@ -12,7 +12,7 @@
 		\n\nBukatu dira hain baliagarria eta funtsezkoa den zerbait egiteko behin-behineko
 		konponbide gogaikarriak.
 		\n\n<b>Nola erabili:</b> edozein aplikazio ireki, adibidez arakatzailea,
-		sakatu \"Partekatu\" eta aukeratu \"Partekatu arbelera\". Orain, joan edozein
+		sakatu \"Partekatu\" eta aukeratu \"Partekatu arbelera\". Orain joan edozein
 		testu-eremutara, sakatu luze eta, agertzen den menuan, sakatu \"Itsatsi\".
 		Hori da dena!
 		\n\nAplikazio honen bereizgarria VCards-ak (kontaktuak) partekatzeko
@@ -21,7 +21,7 @@
 		eta leiho fantasmarik. Hori baino ez: sakatu \"Partekatu\" edozein aplikaziotik
 		kopiatzeko eta itsatsi edozein tokitan!
 		\n\nLaguntzaile askori esker aplikazioa hizkuntza askotan dago eskuragarri.
-		\n\n\nIturburu erabat irekiko, iturburu-kodea hemen eskuragarri dagolarik:
+		\n\n\nIturburu erabat irekikoa, iturburu-kodea hemen eskuragarri dagolarik:
 		\nhttps://github.com/tengusw/share_to_clipboard
 		\nGaratzailea bazara, ekarpenak ongi etorriak dira!
 		\n\nEman edozein arazoren berri, ahal bada e-postaz (tengu@stosb.com)
@@ -39,7 +39,7 @@
     <string name="share_chooser_title">Partekatu hauen bidez:</string>
     <string name="notification_channel">Orokorra</string>
     <string name="notification_title">Arbelera kopiatuta</string>
-    <string name="notification_content">Sakatu hemen beste aplikazio batez partekatzeko</string>
+    <string name="notification_content">Sakatu hemen beste aplikazio batekin partekatzeko</string>
     <string name="display_notification_for_share">Erakutsi berriro partekatzeko jakinarazpena
     </string>
 </resources>
