@@ -8,8 +8,8 @@ android {
         applicationId "com.tengu.sharetoclipboard"
         minSdkVersion 15
         targetSdkVersion 29
-        versionCode 26
-        versionName "1.14.0"
+        versionCode 27
+        versionName "1.14.1"
     }
 
 	lintOptions {
