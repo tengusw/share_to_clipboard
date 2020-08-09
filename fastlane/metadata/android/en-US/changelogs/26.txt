@@ -1,0 +1,3 @@
+* Don't try to open emails and phone numbers, only accept share intents.
+* Add a copy-confirmation toast when the confirmation notification is disabled.
+* Translation: Updated Portuguese

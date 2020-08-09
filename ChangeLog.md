@@ -1,5 +1,8 @@
 #Changelog
 
+## Version 1.14.1
+* Translation: added Basque
+
 ## Version 1.14.0
 * Don't try to open emails and phone numbers, only accept share intents.
 * Add a copy-confirmation toast when the confirmation notification is disabled.
