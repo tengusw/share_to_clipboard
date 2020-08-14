@@ -1,0 +1,11 @@
+Copiar al portapapeles directamente desde el menú Compartir de Android.
+
+Se basa en el sistema nativo de Android para compartir para una total integración.
+
+No más complicaciones para hacer algo tan útil y esencial.
+
+Esta aplicación también soporta compartir VCards (contactos) y hay planes de soportar más tipos.
+
+También, a diferencia de otras soluciones, no tiene errores visuales ni ventanas fantasma, simplemente compartir para copiar y pegar donde quieras!
+
+Gracias a varias contribuciones, la aplicación está disponible en otros idiomas.

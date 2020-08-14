@@ -1,0 +1,11 @@
+Kopiatu arbelera zuzenean Androideko "Partekatu" menutik.
+
+Androideko partekatze sistema natiboan oinarritzen da erabateko integrazioa lortzeko.
+
+Bukatu dira hain baliagarria eta funtsezkoa den zerbait egiteko behin-behineko konponbide gogaikarriak.
+
+Aplikazio honen bereizgarria VCards-ak (kontaktuak) partekatzeko euskarria duela eta beste ezaugarri asko gehitzeko asmoa dugula da.
+
+Gainera, beste irtenbide askok ez bezala, honek ez du inolako akats bisualik eta leiho fantasmarik. Hori baino ez: sakatu "Partekatu" edozein aplikaziotik kopiatzeko eta itsatsi edozein tokitan!
+
+Laguntzaile askori esker aplikazioa hizkuntza askotan dago eskuragarri.
