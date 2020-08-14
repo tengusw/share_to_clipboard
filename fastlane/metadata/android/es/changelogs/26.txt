@@ -1,0 +1,3 @@
+* No intenta abrir emails y números de teléfono, ahora solamente se acepta compartir.
+* Añadida confirmación de copia cuando la notificación está deshabilitada.bled.
+* Traducción: añadido el portugués
