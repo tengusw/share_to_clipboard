@@ -19,7 +19,8 @@ Contributions of all types are more than welcomed!
 
 ### Translations
 
-Translations are highly appreciated and are easy to create. No tech know-how required, just translate the strings in [strings.xml](https://github.com/tengusw/share_to_clipboard/blob/master/app/src/main/res/values/strings.xml) and send us the results.
+Translations are highly appreciated and are easy to create. No tech know-how required, just translate the strings in [strings.xml](https://github.com/tengusw/share_to_clipboard/blob/master/app/src/main/res/values/strings.xml) and send us the results. 
+Also you could translate the [metadata](https://github.com/tengusw/share_to_clipboard/blob/master/fastlane/metadata/android/en-US), excluding the `images` folder, to add translated descriptions about the app on _stores_.
 
 It's better if you can create a pull request, but an email with the translated file will also be appreciated.
 
