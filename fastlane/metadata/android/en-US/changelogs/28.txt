@@ -1,0 +1,2 @@
+* Translation: added Basque translation for the f-droid metadata
+* Translation: added Spanish translation for the f-droid metadata

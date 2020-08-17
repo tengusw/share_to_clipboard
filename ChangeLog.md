@@ -1,5 +1,9 @@
 #Changelog
 
+## Version 1.14.2
+* Translation: added Basque translation for the f-droid metadata
+* Translation: added Spanish translation for the f-droid metadata
+
 ## Version 1.14.1
 * Translation: added Basque
 
