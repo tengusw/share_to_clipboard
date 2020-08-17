@@ -1,0 +1,2 @@
+* Traducción: añadido el euskara en los metadatos de F-Droid
+* Traducción: añadido el español en los metadatos de F-Droid
