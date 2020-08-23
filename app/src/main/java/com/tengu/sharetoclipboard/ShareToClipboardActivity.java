@@ -29,8 +29,7 @@ public class ShareToClipboardActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // Get intent, action and MIME type
+        
         Intent intent = getIntent();
         String action = intent.getAction();
         String type = intent.getType();
