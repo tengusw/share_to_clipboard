@@ -3,9 +3,9 @@
     <string name="share_to_clipboard_activity">Arbela</string>
     <string name="other">Beste bat</string>
     <string name="error_no_data">Ez dago zer kopiatu</string>
-    <string name="error_type_not_supported">Partekatze mota ez da bateragarria, jakinarazi garatzaileei
-    </string>
-    <string name="copied">Arbelera kopiatuta</string>
+    <string name="error_type_not_supported">Partekatze mota ez da bateragarria, jakinarazi garatzaileei</string>
+    <string name="error_type_not_supported_by_platform">Androiden mugengatik formatu hau ezin da arbelean kopiatu.</string>
+    <string name="copied">Arbelean kopiatuta</string>
     <string name="apps_by_tengu">Tenguk sortutako aplikazioak</string>
     <string name="about">Honi buruz</string>
     <string name="about_content">Kopiatu arbelera zuzenean Androideko \"Partekatu\" menutik.
@@ -38,7 +38,7 @@
 
     <string name="share_chooser_title">Partekatu hauen bidez:</string>
     <string name="notification_channel">Orokorra</string>
-    <string name="notification_title">Arbelera kopiatuta</string>
+    <string name="notification_title">Arbelean kopiatuta</string>
     <string name="notification_content">Sakatu hemen beste aplikazio batekin partekatzeko</string>
     <string name="display_notification_for_share">Erakutsi berriro partekatzeko jakinarazpena
     </string>
