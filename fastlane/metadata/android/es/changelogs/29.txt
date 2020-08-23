@@ -1,0 +1,1 @@
+* Añadido un mensaje de error al compartir formatos incompatibles
