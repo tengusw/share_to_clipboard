@@ -2,6 +2,7 @@
 
 ## Version 1.14.3
 * Add an error message when sharing unsupported types
+* Translation: improved Spanish translation
 
 ## Version 1.14.2
 * Translation: added Basque translation for the f-droid metadata
