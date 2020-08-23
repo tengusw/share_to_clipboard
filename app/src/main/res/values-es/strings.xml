@@ -4,6 +4,7 @@
     <string name="other">Otro</string>
     <string name="error_no_data">Nada que copiar</string>
     <string name="error_type_not_supported">Tipo de compartido no soportado, contacta al desarrollador</string>
+    <string name="error_type_not_supported_by_platform">Debido a limitaciones de Android este formatu no se puede copiar al portapapeles</string>
     <string name="copied">Copiado al portapapeles</string>
     <string name="apps_by_tengu">Aplicaciones por Tengu</string>
     <string name="about">Sobre la aplicación</string>
@@ -12,4 +13,10 @@
     <string name="remove_launcher_message">El icono de la aplicación se eliminará de la lista de aplicaciones.\nPara restaurarlo, desinstala e instala la aplicación.</string>
     <string name="show_link_title">Incluir título del enlace</string>
     <string name="settings">Ajustes</string>
+
+    <string name="share_chooser_title">Compartir via</string>
+    <string name="notification_channel">General</string>
+    <string name="notification_title">Copiado al portapapeles</string>
+    <string name="notification_content">Toca aquí para compartir a otra aplicación</string>
+    <string name="display_notification_for_share">Enseñar notificación para volver a compartir</string>
 </resources>
