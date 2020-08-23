@@ -1,5 +1,8 @@
 #Changelog
 
+## Version 1.14.3
+* Add an error message when sharing unsupported types
+
 ## Version 1.14.2
 * Translation: added Basque translation for the f-droid metadata
 * Translation: added Spanish translation for the f-droid metadata
