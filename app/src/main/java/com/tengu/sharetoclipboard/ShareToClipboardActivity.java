@@ -34,16 +34,25 @@ public class ShareToClipboardActivity extends Activity {
         Intent intent = getIntent();
         String action = intent.getAction();
         String type = intent.getType();
-        if (Intent.ACTION_SEND.equals(action) && type != null) {
-            if (type.startsWith("text/")) {
-                if (type.equals("text/plain")){
-                    handleSendText(intent, R.string.error_no_data);
-                } else if (type.equals("text/x-vcard")) {
-                    handleSendVCard(intent);
-                } else {
-                    handleSendText(intent, R.string.error_type_not_supported);
-                }
-            }
+        if (!Intent.ACTION_SEND.equals(action) || type == null) {
+            finish();
+            return;
+        }
+        if (!type.startsWith("text/")) {
+            handleSendText(intent, R.string.error_type_not_supported_by_platform);
+            finish();
+            return;
+        }
+        switch (type) {
+            case "text/plain":
+                handleSendText(intent, R.string.error_no_data);
+                break;
+            case "text/x-vcard":
+                handleSendVCard(intent);
+                break;
+            default:
+                handleSendText(intent, R.string.error_type_not_supported);
+                break;
         }
         finish();
     }
