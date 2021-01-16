@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Share to Clipboard</string>
+    <string name="share_to_clipboard_activity">剪贴板</string>
+    <string name="other">其他</string>
+    <string name="error_no_data">没有可复制的</string>
+    <string name="error_type_not_supported">共享类型不受支持，请向开发者报告。</string>
+    <string name="error_type_not_supported_by_platform">由于安卓系统的限制，这种类型不能复制到剪贴板。</string>
+    <string name="copied">已复制到剪贴板</string>
+    <string name="apps_by_tengu">Tengu 开发的应用</string>
+    <string name="about">关于</string>
+    <string name="about_content">直接从安卓 \"分享\" 菜单复制到剪贴板。
+        \n\n不再有更多恼人的变通方法来做一件如此有用和必要的事情。
+        \n\n<b>如何使用：</b> 打开任意浏览器，比如浏览器， 按 \"分享\"并
+        选择 \"Share to Clipboard\"。 现在去任意文本框，长按，在弹出菜单中
+        点击 \"粘贴\"。就是这样！\n\n这个应用的独特之处在于我们还支持分享
+        电子名片 （联系人）并计划添加更多其它类型！
+        \n\n另外，不像许多其他的解决方案，本应用没有任何的视觉错误和幽灵窗口，
+		，从任意应用点击分享以复制，并粘贴在任何你喜欢的地方！
+        \n\n多亏了许多贡献者，本应用程序有多种语言版本。
+        \n\n\n完全开源，源代码位于：
+        \nhttps://github.com/tengusw/share_to_clipboard
+        \n如果你是一名开发人员，欢迎作贡献！
+        \n\n请让我们知道任何程序的问题，最好是通过电子邮件（tengu@stosb.com）
+        \n\n你也可以使用这个链接来支持开发： https://stosb.com/tengu/donate/
+    </string>
+    <string name="remove_launcher">移除启动器</string>
+    <string name="remove_launcher_message">应用程序图标将从系统的应用程序列表中消失。\n要恢复图标，请卸载并
+	重新安装应用。
+        \n* 在某些手机型号上，这可能会导致一些问题。
+    </string>
+    <string name="show_link_title">包含链接标题</string>
+    <string name="settings">设置</string>
+
+    <string name="share_chooser_title">分享方式</string>
+    <string name="notification_channel">一般</string>
+    <string name="notification_title">已复制到剪贴板</string>
+    <string name="notification_content">点击此处用一个不同的应用进行分享</string>
+    <string name="display_notification_for_share">展示重新分享通知
+    </string>
+</resources>
