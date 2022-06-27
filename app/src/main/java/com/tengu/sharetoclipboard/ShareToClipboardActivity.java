@@ -33,12 +33,8 @@ public class ShareToClipboardActivity extends Activity {
         Intent intent = getIntent();
         String action = intent.getAction();
         String type = intent.getType();
+
         if (!Intent.ACTION_SEND.equals(action) || type == null) {
-            finish();
-            return;
-        }
-        if (!type.startsWith("text/")) {
-            handleSendText(intent, R.string.error_type_not_supported_by_platform);
             finish();
             return;
         }
@@ -50,7 +46,13 @@ public class ShareToClipboardActivity extends Activity {
                 handleSendVCard(intent);
                 break;
             default:
-                handleSendText(intent, R.string.error_type_not_supported);
+				if (type != null && type.startsWith("image/")) {
+					// copy shared image to clipboard
+					handleSendImage(intent);
+				} else {
+					// not supported
+	                handleSendText(intent, R.string.error_type_not_supported);
+				}
                 break;
         }
         finish();
@@ -111,6 +113,23 @@ public class ShareToClipboardActivity extends Activity {
                 if (i > 0) output.append(",");
                 output.append(capitalize(types.get(i).toString()));
             }
+        }
+    }
+
+    private void handleSendImage(Intent intent) {
+        boolean has_extra_steam = intent.hasExtra(Intent.EXTRA_STREAM);
+        if(!has_extra_steam) {
+            return;
+        }
+        Uri uri = intent.getParcelableExtra(Intent.EXTRA_STREAM);
+        ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newUri(getContentResolver(), "image", uri);
+        clipboard.setPrimaryClip(clip);
+
+        if (PreferenceUtil.shouldDisplayNotification(this)) {
+            NotificationUtil.createNotification(this);
+        } else {
+            showToast(getString(R.string.notification_title));
         }
     }
 
