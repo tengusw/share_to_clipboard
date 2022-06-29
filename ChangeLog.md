@@ -1,5 +1,8 @@
 #Changelog
 
+## Version 1.15.0
+* Add image copying support
+
 ## Version 1.14.3
 * Add an error message when sharing unsupported types
 * Translation: improved Spanish translation
