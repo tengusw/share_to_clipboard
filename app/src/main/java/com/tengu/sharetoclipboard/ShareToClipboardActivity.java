@@ -6,6 +6,7 @@ import android.content.ClipboardManager;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract.Contacts;
 import android.widget.Toast;
@@ -44,7 +45,6 @@ public class ShareToClipboardActivity extends Activity {
         } else if (type.equals("text/x-vcard")) {
             handleSendVCard(intent);
         } else if (type.startsWith("image/")) {
-            // copy shared image to clipboard
             handleSendImage(intent);
         } else {
             // not supported
@@ -117,6 +117,13 @@ public class ShareToClipboardActivity extends Activity {
             showToast(getString(R.string.error_no_data));
             return;
         }
+
+        // pasting images via virtual keyboard only available since Android 7.1 (API 25)
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N_MR1) {
+            showToast(getString(R.string.error_type_not_supported_by_platform));
+            return;
+        }
+
         Uri uri = intent.getParcelableExtra(Intent.EXTRA_STREAM);
         ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
         ClipData clip = ClipData.newUri(getContentResolver(), "image", uri);
