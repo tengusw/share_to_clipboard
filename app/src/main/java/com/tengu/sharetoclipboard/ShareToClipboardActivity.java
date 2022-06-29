@@ -38,22 +38,17 @@ public class ShareToClipboardActivity extends Activity {
             finish();
             return;
         }
-        switch (type) {
-            case "text/plain":
-                handleSendText(intent, R.string.error_no_data);
-                break;
-            case "text/x-vcard":
-                handleSendVCard(intent);
-                break;
-            default:
-				if (type != null && type.startsWith("image/")) {
-					// copy shared image to clipboard
-					handleSendImage(intent);
-				} else {
-					// not supported
-	                handleSendText(intent, R.string.error_type_not_supported);
-				}
-                break;
+
+        if (type.equals("text/plain")) {
+            handleSendText(intent, R.string.error_no_data);
+        } else if (type.equals("text/x-vcard")) {
+            handleSendVCard(intent);
+        } else if (type.startsWith("image/")) {
+            // copy shared image to clipboard
+            handleSendImage(intent);
+        } else {
+            // not supported
+            handleSendText(intent, R.string.error_type_not_supported);
         }
         finish();
     }
@@ -118,19 +113,15 @@ public class ShareToClipboardActivity extends Activity {
 
     private void handleSendImage(Intent intent) {
         boolean has_extra_steam = intent.hasExtra(Intent.EXTRA_STREAM);
-        if(!has_extra_steam) {
+        if (!has_extra_steam) {
+            showToast(getString(R.string.error_no_data));
             return;
         }
         Uri uri = intent.getParcelableExtra(Intent.EXTRA_STREAM);
         ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
         ClipData clip = ClipData.newUri(getContentResolver(), "image", uri);
         clipboard.setPrimaryClip(clip);
-
-        if (PreferenceUtil.shouldDisplayNotification(this)) {
-            NotificationUtil.createNotification(this);
-        } else {
-            showToast(getString(R.string.notification_title));
-        }
+        showSuccessNotification();
     }
 
     private void showToast(String text) {
@@ -166,7 +157,10 @@ public class ShareToClipboardActivity extends Activity {
         ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
         ClipData clip = ClipData.newPlainText("text", clipboardText);
         clipboard.setPrimaryClip(clip);
+        showSuccessNotification();
+    }
 
+    private void showSuccessNotification() {
         if (PreferenceUtil.shouldDisplayNotification(this)) {
             NotificationUtil.createNotification(this);
         } else {
