@@ -6,6 +6,7 @@ import android.content.ClipboardManager;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract.Contacts;
 import android.widget.Toast;
@@ -33,25 +34,21 @@ public class ShareToClipboardActivity extends Activity {
         Intent intent = getIntent();
         String action = intent.getAction();
         String type = intent.getType();
+
         if (!Intent.ACTION_SEND.equals(action) || type == null) {
             finish();
             return;
         }
-        if (!type.startsWith("text/")) {
-            handleSendText(intent, R.string.error_type_not_supported_by_platform);
-            finish();
-            return;
-        }
-        switch (type) {
-            case "text/plain":
-                handleSendText(intent, R.string.error_no_data);
-                break;
-            case "text/x-vcard":
-                handleSendVCard(intent);
-                break;
-            default:
-                handleSendText(intent, R.string.error_type_not_supported);
-                break;
+
+        if (type.equals("text/plain")) {
+            handleSendText(intent, R.string.error_no_data);
+        } else if (type.equals("text/x-vcard")) {
+            handleSendVCard(intent);
+        } else if (type.startsWith("image/")) {
+            handleSendImage(intent);
+        } else {
+            // not supported
+            handleSendText(intent, R.string.error_type_not_supported);
         }
         finish();
     }
@@ -114,6 +111,26 @@ public class ShareToClipboardActivity extends Activity {
         }
     }
 
+    private void handleSendImage(Intent intent) {
+        boolean has_extra_steam = intent.hasExtra(Intent.EXTRA_STREAM);
+        if (!has_extra_steam) {
+            showToast(getString(R.string.error_no_data));
+            return;
+        }
+
+        // pasting images via virtual keyboard only available since Android 7.1 (API 25)
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N_MR1) {
+            showToast(getString(R.string.error_type_not_supported_by_platform));
+            return;
+        }
+
+        Uri uri = intent.getParcelableExtra(Intent.EXTRA_STREAM);
+        ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newUri(getContentResolver(), "image", uri);
+        clipboard.setPrimaryClip(clip);
+        showSuccessNotification();
+    }
+
     private void showToast(String text) {
         Toast.makeText(this, text, Toast.LENGTH_LONG).show();
     }
@@ -147,7 +164,10 @@ public class ShareToClipboardActivity extends Activity {
         ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
         ClipData clip = ClipData.newPlainText("text", clipboardText);
         clipboard.setPrimaryClip(clip);
+        showSuccessNotification();
+    }
 
+    private void showSuccessNotification() {
         if (PreferenceUtil.shouldDisplayNotification(this)) {
             NotificationUtil.createNotification(this);
         } else {
