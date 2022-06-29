@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion '29.0.2'
 
     defaultConfig {
         applicationId "com.tengu.sharetoclipboard"
@@ -12,9 +11,6 @@ android {
         versionName "1.15.0"
     }
 
-	lintOptions {
-		 disable 'MissingTranslation'
-	}
 
     buildTypes {
         release {
@@ -26,6 +22,9 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
+    }
+    lint {
+        disable 'MissingTranslation'
     }
 
     /*
