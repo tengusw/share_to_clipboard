@@ -1,0 +1,11 @@
+Doğrudan Android "Paylaş" menüsünden panoya kopyalayın.
+
+Sorunsuz entegrasyon için Android yerel paylaşım sistemine bağlanır.
+
+Çok faydalı ve gerekli olan bir şeyi yapmak için artık can sıkıcı geçici çözümler yok.
+
+Bu uygulamaya özgü olan, VCard'ların (kişi) paylaşımını da desteklememiz ve diğerlerini eklemeyi planlamamızdır.
+
+Ayrıca, diğer çözümlerin aksine, bu çözümde görsel hatalar ve sahte pencereler yoktur, herhangi bir uygulamadan kopyalamak için Paylaş'a tıklamanız ve istediğiniz yere yapıştırmanız yeterlidir!
+
+Birçok katılımcı sayesinde, uygulama birçok dilde mevcut.
