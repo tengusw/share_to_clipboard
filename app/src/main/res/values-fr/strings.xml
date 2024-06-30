@@ -4,7 +4,8 @@
     <string name="other">Autre</string>
     <string name="error_no_data">Rien à copier</string>
     <string name="error_type_not_supported">Type de partage non supporté, merci de rapporter aux développeurs</string>
-    <string name="copied">Copier vers le Presse-papiers</string>
+    <string name="error_type_not_supported_by_platform">À cause des limitations d\'Android, ce type ne peut pas être copié dans le presse-papier. <⁣/string>
+    <string name="copied">Copié vers le Presse-papiers</string>
     <string name="apps_by_tengu">Application par Tengu</string>
     <string name="about">À propos</string>
     <string name="about_content">Copier vers le Presse-papiers directement à partir du bouton \"Partager\" d\'Android.\n
@@ -26,4 +27,12 @@
     <string name="remove_launcher">Retirer le lanceur</string>
     <string name="remove_launcher_message">L\'icône de l\'application sera retirée de la liste des applications système.\n
  Pour retrouver l\'icône, veuillez désinstaller et réinstaller l\'application.</string>
+    <string name="show_link_title">Inclure le titre des liens</string>
+    <string name="settings">Paramètres</string>
+
+    <string name="share_chooser_title">Partager avec</string>
+    <string name="notification_title">Copié vers le Presse-papier</string>
+    <string name="notification_content">Cliquez ici pour partager avec une application différente</string>
+    <string name="display_notification_for_share">Afficher les notification de re-partage
+    </string>
 </resources>

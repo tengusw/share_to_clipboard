@@ -1,0 +1,17 @@
+Copier vers le Presse-papiers directement à partir du bouton "Partager" d'Android.
+ 
+ Plus besoin de bricolage pour faire une opération aussi utile et essentielle.
+ 
+ Comment ça marche : ouvrez n'importe quelle application, par exemple votre navigateur, appuyez sur "Partager", et choisissez "Partager avec le Presse-papiers". Maintenant, utilisez n'importe quel champ texte, pressez long et choisissez "Coller" dans le menu surgissant. Et c'est tout !
+ 
+ Ce qui est unique avec cette application c'est que nous supportons également les VCards (contacts) et nous prévoyons d'autres possibilités.
+ 
+ À la différence d'autres solutions, nous n'avons pas de bug visuels ni de fenêtre fantôme. Cliquez juste sur le bouton "Partager" de n'importe quelle application et collez le texte où vous le souhaitez.
+ 
+ Merci aux nombreux contributeurs. Cette application est disponible dans de nombreuses langues.
+ 
+ Complètement Open-Source, avec le code source disponible sur : https://github.com/tengusw/share_to_clipboard
+ Si vous êtes développeurs, vos contributions sont bienvenues !
+ 
+ Merci de nous faire connaître tous les éventuels problèmes. De préférence par email (tengu@stosb.com).
+ 
