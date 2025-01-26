@@ -1,8 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">共有からクリップボード</string>
+    <string name="app_name">Share to Clipboard</string>
     <string name="share_to_clipboard_activity">クリップボード</string>
     <string name="other">その他</string>
-    <string name="error_no_data">コピー対象がありません</string>
-    <string name="error_type_not_supported">共有の形式がサポートされていません。開発者にご連絡ください</string>
+    <string name="error_no_data">コピー対象はありません</string>
+    <string name="error_type_not_supported">共有タイプが非対応です。開発者に報告してください。</string>
+    <string name="error_type_not_supported_by_platform">Android の制限によりこのタイプはクリップボードにコピーできません。</string>
     <string name="copied">クリップボードにコピーしました</string>
+    <string name="apps_by_tengu">Apps by Tengu</string>
+    <string name="about">アプリについて</string>
+    <string name="about_content">Android の「共有」メニューからクリップボードに直接コピーをします。
+        \n\n非常に便利で不可欠な機能を実行するために面倒な回避策を講じる必要はもう必要ありません。
+        \n\n<b>使用方法:</b> ブラウザなどの任意のアプリを開いて「共有」を選択して「クリップボードにコピー」をタップします。次に任意のテキストフィールドに移動して長押しでポップアップアップメニューから「貼り付け」をタップします。これで完了です！\n\nこのアプリのユニークな点は、Vcard (連絡先) の共有もサポートしており、
+        他にも多くの機能を追加する予定です。
+        \n\nまた、他の多くのソリューションとは異なりこのアプリには視覚的なバグやファントムウィンドウはありません。共有を選択して任意のアプリからコピーして好きな場所に貼り付けるだけです。
+        \n\n多くの貢献者のおかげで、このアプリは多くの言語で利用できます。
+        \n\n\n完全にオープンソースでソースコードは以下から入手できます:
+        \nhttps://github.com/tengusw/share_to_clipboard
+        \n\n開発者の方はぜひ貢献してください！
+        \n\n問題があった場合は、メール (tengu@stosb.com) でお知らせください。
+        \n\nこのリンクを使用して開発を支援することもできます: https://stosb.com/tengu/donate/
+    </string>
+    <string name="remove_launcher">ランチャーから削除する</string>
+    <string name="remove_launcher_message">アプリアイコンはシステムの
+        アプリリストから削除されます。\nアイコンを復元するにはアプリをアンインストール後に再インストールしてください。
+        \n* 一部のデバイスでは、これにより問題が発生する可能性があります。
+    </string>
+    <string name="show_link_title">リンクタイトルを挿入</string>
+    <string name="settings">設定</string>
+    <string name="share_chooser_title">共有</string>
+    <string name="notification_channel">一般</string>
+    <string name="notification_title">クリップボードにコピーしました</string>
+    <string name="notification_content">ここをタップで別のアプリと共有できます</string>
+    <string name="display_notification_for_share">再共有時に通知を表示
+    </string>
 </resources>
