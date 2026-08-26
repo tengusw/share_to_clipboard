@@ -1,6 +1,16 @@
 .gradle
 /local.properties
-/.idea/workspace.xml
-/.idea/libraries
 .DS_Store
+
+# Build output
 /build
+/app/build
+/app/release
+
+# IDE
+*.iml
+/.idea/*
+!/.idea/vcs.xml
+
+# Google app-ownership verification (account-specific, do not publish)
+/app/src/main/assets/adi-registration.properties
